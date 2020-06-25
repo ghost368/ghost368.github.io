@@ -28,5 +28,3 @@ field but without the username at the end
 git config --global user.name "<your name>"
 git config --global user.email "<your e-mail>"
 ```
-
-* what is id_rsa?
