@@ -23,7 +23,7 @@ then in the github account go to settings, SSHand GPG keys,
 add new ssh key and put the content of id_rsa.pub to the key 
 field but without the username at the end
 
-* Run
+* Then run
 ```
 git config --global user.name "<your name>"
 git config --global user.email "<your e-mail>"
