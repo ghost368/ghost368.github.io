@@ -1,1 +1,2 @@
-* TOC {:toc}
+* Table of Contents 
+{:toc}
