@@ -1,5 +1,5 @@
 
-	# Useful Chrome extensions
+# Useful Chrome extensions
   
   * tool to walk over google search results with keyboard:
 https://github.com/infokiller/web-search-navigator
