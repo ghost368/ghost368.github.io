@@ -9,3 +9,5 @@ go to Settings -> Storage -> Controller IDE -> Optical Drive (under Attributes) 
 
 * Download and install MobaXterm on windows
 
+* Settings -> Network 
+Adapters: NAT vs Host-only, ssh connection
