@@ -30,6 +30,9 @@ Commercial linux distribution for servers and workstations.
 Has trademarks
 
 <br />
+<br />
+<br />
+
 
 If a stable no-desktop distro is needed:
 1. CentOS for servers
