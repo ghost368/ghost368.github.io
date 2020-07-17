@@ -20,3 +20,6 @@ Ubuntu Server but less clear with Fedora and CentOS
 * Use this article 
 https://medium.com/platform-engineer/port-forwarding-for-ssh-http-on-virtualbox-459277a888be 
 for post-forwarding settings.
+
+TODO:
+post-forwarding, host, NAT, Host only, TCP, SSH, HTTP, port, host port, guest port, proxy
