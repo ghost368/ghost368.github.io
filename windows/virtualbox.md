@@ -6,3 +6,6 @@
 go to Settings -> Storage -> Controller IDE -> Optical Drive (under Attributes) and add the iso file
 
 * Start the VM, choose the iso for boot and follow the instructions
+
+* Download and install MobaXterm on windows
+
