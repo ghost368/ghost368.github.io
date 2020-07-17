@@ -5,7 +5,7 @@
 |ls | see current wd contents|
 |ls -a | see current wd contents including hidden files|
 | la -1| output in column |
-| <command> \| vim - | open output of any command in vim |
+| command \| vim - | open output of any command in vim |
 | ln -s /path/to/folder shortname | create soft link to a folder|
 | readlink -f linkname | get soft link target |
 |cp -r /dir1 /dir2  | copy folders|
