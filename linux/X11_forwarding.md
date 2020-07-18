@@ -21,3 +21,7 @@ or
 ```
 sudo systemctl restart ssh
 ```
+
+X11 forwarding is not very efficient to complicated GUI like web-browsers or video, see the info below
+
+https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient
