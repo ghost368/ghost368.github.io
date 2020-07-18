@@ -17,6 +17,13 @@ go to Settings -> Storage -> Controller IDE -> Optical Drive (under Attributes) 
 * Need linux server with ```openssh-server``` installed and ssh authentification authorized. This is easy to configure with 
 Ubuntu Server but less clear with Fedora and CentOS
 
+* Run 
+```
+sudo apt-get install openssh-server
+sudo service ssh status
+```
+(should be active, also has start, restart, stop options)
+
 * Use this article 
 https://medium.com/platform-engineer/port-forwarding-for-ssh-http-on-virtualbox-459277a888be 
 for post-forwarding settings.
