@@ -31,6 +31,15 @@ in the right panel add
 "font_size": 12,
 ```
 
+* Install MarkdownPreview package
+add 
+
+```
+{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
+```
+
+to KeyBindings
+
 * Shortcuts
 
 | Shortcut | Action |
