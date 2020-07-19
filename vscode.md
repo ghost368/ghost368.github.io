@@ -15,6 +15,7 @@
 | Ctrl + col nb| Switch cursor to certain column |
 | Ctrl+Shift+'| Open terminal|
 | Ctrl + J| Hide/show terminal window|
+| Ctrl + B| Hide/show sidebar|
 |Ctrl+Shift+X| Open extensions|
 |Ctrl+Shift+E| Open side explorer|
 
