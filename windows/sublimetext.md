@@ -32,6 +32,7 @@ in the right panel add
 ```
 
 * Shortcuts
+
 | Shortcut | Action |
 | ------------ | ------------- |
 | Alt + Shift + nb columns| Split view into multiple columns |
