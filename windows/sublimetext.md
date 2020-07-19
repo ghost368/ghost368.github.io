@@ -31,14 +31,16 @@ in the right panel add
 "font_size": 12,
 ```
 
-* Install MarkdownPreview package
-add 
-
+* Install MarkdownLivePreview package
+add to KeyBindings
 ```
-{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
+{
+    "keys": ["alt+m"],
+    "command": "open_markdown_preview"
+}
 ```
 
-to KeyBindings
+
 
 * Shortcuts
 
