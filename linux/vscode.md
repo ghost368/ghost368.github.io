@@ -10,3 +10,9 @@ sudo apt-get install snapd
 ```
 sudo snap install --classic code
 ```
+
+Run VSCode
+
+```
+code
+```
