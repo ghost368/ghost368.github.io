@@ -26,7 +26,7 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 | Ctrl + B| Hide/show sidebar|
 |Ctrl+Shift+X| Open extensions|
 |Ctrl+Shift+E| Open side explorer|
-|Ctrl+Shift+\\| Split editor window vertically|
+|Ctrl+Shift+ slash| Split editor window vertically|
 
 
 
