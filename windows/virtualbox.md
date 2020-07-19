@@ -28,5 +28,12 @@ sudo service ssh status
 https://medium.com/platform-engineer/port-forwarding-for-ssh-http-on-virtualbox-459277a888be 
 for post-forwarding settings.
 
+* To solve potential problems with resolution when using VM GUI application install guest additions on VM
+
+```
+sudo apt update
+sudo apt install build-essential dkms linux-headers-$(uname -r)
+```
+
 TODO:
 post-forwarding, host, NAT, Host only, TCP, SSH, HTTP, port, host port, guest port, proxy
