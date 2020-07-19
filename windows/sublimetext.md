@@ -30,3 +30,8 @@ in the right panel add
 "font_face": "Consolas",
 "font_size": 12,
 ```
+
+| Shortcut | Action |
+| ------------ | ------------- |
+| Alt + Shift + nb columns| Split view into multiple columns |
+| Ctrl + col nb| Switch cursor to certain column |
