@@ -16,3 +16,5 @@ Run VSCode
 ```
 code
 ```
+
+(quite slow when used with X11 forwarding, better to use remote access feature via rmate)
