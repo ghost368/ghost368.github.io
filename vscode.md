@@ -9,6 +9,8 @@
  
  * Install Python extension
  
+ * Ctrl+Shift+P -> Settings -> Font size -> make 15
+ 
  * Open project -> Select Interpreter
  be sure jupyter is installed in the environment
  
