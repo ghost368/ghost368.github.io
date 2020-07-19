@@ -31,6 +31,7 @@ in the right panel add
 "font_size": 12,
 ```
 
+* Shortcuts
 | Shortcut | Action |
 | ------------ | ------------- |
 | Alt + Shift + nb columns| Split view into multiple columns |
