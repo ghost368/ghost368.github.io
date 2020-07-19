@@ -8,4 +8,6 @@ sudo snap install --classic pycharm-community
 
 ```
 pycharm-community
-``
+```
+
+(works reasonably well with X11 forwarding)
