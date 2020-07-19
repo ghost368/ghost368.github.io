@@ -16,6 +16,8 @@
  
 then : select interpreter to start Jupyter -> then can open python interactive window
 
+ * Ctrl+Shift+P -> Settings -> Send selection to interactive window -> Check the box
+ 
  
  * Shortcuts
  
