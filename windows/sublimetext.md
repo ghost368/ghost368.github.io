@@ -22,3 +22,11 @@ class MinimapSetting(sublime_plugin.EventListener):
         elif show_minimap is not None:
             view.window().set_minimap_visible(False)
 ```
+
+* Ctrl+Shift+P -> Settings, 
+in the right panel add 
+
+```
+"font_face": "Consolas",
+"font_size": 12,
+```
