@@ -14,8 +14,9 @@
 | Alt + Shift + nb columns| Split view into multiple columns |
 | Ctrl + col nb| Switch cursor to certain column |
 | Ctrl+Shift+'| Open terminal|
-| Ctrl + J| Hide terminal window|
-
+| Ctrl + J| Hide/show terminal window|
+|Ctrl+Shift+X| Open extensions|
+|Ctrl+Shift+E| Open side explorer|
 
 
 
