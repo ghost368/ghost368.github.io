@@ -7,6 +7,14 @@
  * Color theme
  Ctrl+Shift+P -> Color Scheme -> choose Light (Visual Studio)
  
+ * Install Python extension
+ 
+ * Open project -> Select Interpreter
+ be sure jupyter is installed in the environment
+ 
+then : select interpreter to start Jupyter -> then can open python interactive window
+
+ 
  * Shortcuts
  
 | Shortcut | Action |
