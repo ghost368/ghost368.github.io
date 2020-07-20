@@ -37,3 +37,12 @@ you will be prompted to enter the password the specified user
     - ssh to the server should work without password now
     
     - save to proposed location without passphrase
+
+* SFTP is a secure FTP (file transfer protocol) based on ssh
+to open sftp connection 
+
+```
+sftp user@host_ip_address_or_domain
+```
+
+(won't work with NAT, need separate ip address)
