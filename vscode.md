@@ -46,6 +46,21 @@ then : select interpreter to start Jupyter -> then can open python interactive w
   sudo apt-get install pandoc
   ```
   
+  - if problem with inkscape, need to manually install it
+  
+  ```
+  sudo apt-get install inkscape
+  ```
+  
+  - then run convertion as follows
+  
+  ```
+  jupyter nbconvert --to pdf file.ipynb
+  ```
+  
+  - can use ``` --to pdf, --to html, --to latex ``` etc
+  - can add ``` --no-input --no-prompt ``` to skip code and cell numbers respectively
+  
   
  
  
