@@ -46,6 +46,8 @@ add to KeyBindings
 * Install Git package through package control
 use Ctrl+Shift+P -> Git (with all standard commands; key binding not really necessary here)
 
+* Install Terminal package
+press Ctrl+Alt+Shift+t to open powershell in the current project folder (if e.g. need to work with git in console)
 
 * Shortcuts
 
