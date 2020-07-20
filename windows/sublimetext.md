@@ -37,10 +37,10 @@ add to KeyBindings
  { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} }
 ```
 
-* add open folder shortcut to key bindings
+* add open folder shortcut to key bindings (folder will be added to the current window)
 
 ```
-{ "keys": ["ctrl+shift+o"], "command": "prompt_open_folder"}
+{ "keys": ["ctrl+shift+o"], "command": "prompt_add_folder"}
 ```
 
 * Shortcuts
