@@ -66,6 +66,9 @@ then : select interpreter to start Jupyter -> then can open python interactive w
  * Install relative line number extension
  run Ctrl+Shift+P -> enable relative line number
  
+ * Install vim emulator extension
+   then Ctrl+Shift+P -> Open keyboard shortcuts -> search to toggleVim -> add Ctrl+Alt+V shortcut 
+   to switch between vim and normal mode
  
  * Shortcuts
  
