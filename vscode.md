@@ -27,6 +27,10 @@ then : select interpreter to start Jupyter -> then can open python interactive w
     - in user settings search for Black Args and add ```--skip-string-normalization``` (to avoid using " ")
     
 * Create new file: Ctrl+N -> Ctrl+S -> specify the path and the file name
+
+* Install extensions:
+  - html preview, Ctrl+K V to preview html
+  - vscode-pdf to view pdfs
  
  
 * Using jupyter notebook
