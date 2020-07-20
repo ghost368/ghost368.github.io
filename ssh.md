@@ -46,3 +46,6 @@ sftp user@host_ip_address_or_domain
 ```
 
 (won't work with NAT, need separate ip address)
+
+* Add public key to github account:
+go to Settings -> SSH and GPG keys -> add ssh key (starting with ssh-rsa)
