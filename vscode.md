@@ -39,6 +39,14 @@ then : select interpreter to start Jupyter -> then can open python interactive w
   ```
   sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-generic-recommended
   ```
+  
+  - install ```pandoc``` to convert markdown to other formats than html
+  
+  ```
+  sudo apt-get install pandoc
+  ```
+  
+  
  
  
  
