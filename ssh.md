@@ -24,12 +24,16 @@ you will be prompted to enter the password the specified user
     
 * It is recommended to use ssh key pairs rather than entering password for convenience and security reasons
 
-* generate ssh key in windows:
+* generate ssh key in windows (very similar in linux):
     - run cmd as admin (right click -> Run as administrator)
     - command
     
     ```
     ssh-keygen -t rsa -C "your_email@example.com"
     ```
+    
+    - create the file authorized_keys in the server (that you want to ssh to) ~/.ssh folder
+    - copy the key (all content) from id_rsa.pub file (should start with ssh-rsa, be sure it's not the private key)
+    - ssh to the server should work without password now
     
     - save to proposed location without passphrase
