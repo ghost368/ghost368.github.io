@@ -43,6 +43,10 @@ add to KeyBindings
 { "keys": ["ctrl+shift+o"], "command": "prompt_add_folder"}
 ```
 
+* Install Git package through package control
+use Ctrl+Shift+P -> Git (with all standard commands; key binding not really necessary here)
+
+
 * Shortcuts
 
 | Shortcut | Action |
