@@ -25,6 +25,8 @@ then : select interpreter to start Jupyter -> then can open python interactive w
     - Now Format Document command will apply black
     - in user settings look for 'format on save' and check the box (now Format will apply at each saving)
     - in user settings search for Black Args and add ```--skip-string-normalization``` (to avoid using " ")
+    
+ * Create new file: Ctrl+N -> Ctrl+S -> specify the path and the file name
  
  
  * Shortcuts
