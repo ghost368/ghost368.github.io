@@ -49,3 +49,4 @@ add to KeyBindings
 | ------------ | ------------- |
 | Alt + Shift + nb columns| Split view into multiple columns |
 | Ctrl + col nb| Switch cursor to certain column |
+|Esc | Close build window |
