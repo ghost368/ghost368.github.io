@@ -63,7 +63,8 @@ then : select interpreter to start Jupyter -> then can open python interactive w
   
   
  
- 
+ * Install relative line number extension
+ run Ctrl+Shift+P -> enable relative line number
  
  
  * Shortcuts
