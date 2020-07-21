@@ -17,3 +17,6 @@ to procrastinate
 * Open Tabs Next to Current extension:
   Ctrl+T will open the new table next to current one
   Ctrl+Shift+Y to open a new table at the end
+
+* Hide download bar extension
+then use Ctrl+Shift+H to hide it

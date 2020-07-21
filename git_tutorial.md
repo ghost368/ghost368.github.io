@@ -243,6 +243,21 @@ git cherry-pick -x aba6c1b # Several commits can be cherry picked
 
 
 
+*  Adding 'add all and commit'
+
+run
+
+```
+git config --global alias.ca '!git add --all && git commit'
+```
+
+then use as
+
+```
+git ca -m 'Commit message'
+```
+
+
 
 
 

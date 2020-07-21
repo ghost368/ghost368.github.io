@@ -1,0 +1,132 @@
+* mappings 
+
+```imap jk <Esc>```
+
+
+
+* vscode mappings (add to settings json)
+
+```
+"vim.insertModeKeyBindings": [
+     {
+         "before": ["j", "j"],
+         "after": ["<esc>"]
+     }
+]
+```
+
+* switching to Insert mode
+
+|command |action|
+|---------------|----------------|
+|i| insert before cursor|
+|I| insert at the beginning of the line|
+|a| insert after cursor|
+|A| insert at the end of line|
+|o | insert to a new line below the current line|
+|O | insert to a new line above the current line|
+|s| substitute single character at cursor|
+|S or cc| substitute the entire line|
+|C| substitute the rest of line starting from cursor|
+
+J : join current line with the next line
+
+* navigation
+
+|command |action|
+|---------------|----------------|
+|j k h l| down up left right (can have nb in front)|
+|0 $| to line start/end|
+|^| to first non-blank line character|
+|g_| to last non-black character|
+|Ctrl+F/B| page down/up|
+|:n :$| to n-th line, to file end|
+
+* Vim keeps track of your navigation using a jump list. You can go backward and forward
+through that list
+
+Ctrl+O/Ctrl+i : jump previous/next position
+
+in VSCode vim: Atl left/right (general commands)
+
+
+* Cut, Copy and Paste
+
+|command |action|
+|------|--------|
+|x| Delete character from cursor position|
+|X| Delete previous character from cursor position|
+|y| Copy single character from cursor position|
+|p| Paste character after cursor position|
+|P| Paste character before cursor position|
+
+
+u/Ctrl+r : undo/redo
+
+|command |action|
+|------|--------|
+|dw| Delete word from cursor position|
+|D| Delete entire line from cursor position|
+|d| Delete entire line|
+|Y| Copies entire line|
+|yy| Copies entire line|
+
+
+* modes: command, insert, command line and visual
+
+
+* ```:edit file.txt``` create or edit file in the current dir using vim
+
+* ```:w``` save, ```:q``` quit, ```:q!``` quit w/o saving
+
+
+* b and w : go back forward one word
+* dd also saves the deleted text in the buffer (can be pasted with p, so it's like cut)
+
+* Shift + V : select line
+
+* v : go to visual mode
+
+
+* form command mode : / to start search, then Enter and use n/N to go through search results forward/backward
+* * (star) enable to search for the current word under cursor and use n/N to go through
+
+
+* horizontal moves
+|command |action|
+|------|--------|
+|f char| move to the next char in the current line (F for previous)|
+|t char| move right before the next char in the current line (T for previous)|
+|: ,| go through results fwd/backwd after applying f, F, t, T|
+
+
+* can use d with other commands (0 $ w b j k 10j etc) to delete,
+c with other commands : same as d but goes directly into insert mode after that
+
+
+* vim requires the cursor to be visible at all times (this is not true in VSCode vim though), 
+but can leave mark with ```mg```, go elsewhere and then go back with ````g``` 
+
+
+* zt, zb, zz : move current line to the top, bottom and center of the screen
+
+
+* can copy and paste content using y and p combined with other commands between different files in vscode
+
+
+
+
+----------------
+stopped at Searching (page 24)
+
+
+
+--------------------------
+
+
+questions:
+- how to copy external content in vim mode
+
+- understand better how copying with ```y``` works
+
+- how to copy between different files in terminal vim
