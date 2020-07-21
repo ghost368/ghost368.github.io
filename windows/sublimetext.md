@@ -57,3 +57,6 @@ press Ctrl+Alt+Shift+t to open powershell in the current project folder (if e.g.
 | Alt + Shift + nb columns| Split view into multiple columns |
 | Ctrl + col nb| Switch cursor to certain column |
 |Esc | Close build window |
+
+
+* Ctrl+P : go to anything (including the currently open files)

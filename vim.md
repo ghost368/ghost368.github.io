@@ -110,6 +110,7 @@ but can leave mark with ```mg```, go elsewhere and then go back with ````g```
 
 * zt, zb, zz : move current line to the top, bottom and center of the screen
 
+* daw caw - delete the word around the cursor (and switch to insert for caw)
 
 * can copy and paste content using y and p combined with other commands between different files in vscode
 
