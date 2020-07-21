@@ -48,6 +48,7 @@ use Ctrl+Shift+P -> Git (with all standard commands; key binding not really nece
 
 * Install Terminal package
 press Ctrl+Alt+Shift+t to open powershell in the current project folder (if e.g. need to work with git in console)
+(can change powershell to cmd by setting terminal as cmd.exe in Preferences > Package Settings > Terminal > Settings Default)
 
 * Shortcuts
 
