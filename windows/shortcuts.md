@@ -1,7 +1,7 @@
 | Shortcut | Action |
 | ------------ | ------------- |
 | Ctrl+Shift+N | create new folder |
-| Alt+Tab | shift window|
+| Alt+Tab (plus can use arrows to navigate whicle holding) | shift window|
 | Alt + Spacebar + N | robust window minimize |
 |F11 | enter and exit full screen mode for web-pages |
 | F2 | rename selected item |
