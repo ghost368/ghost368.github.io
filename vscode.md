@@ -71,6 +71,9 @@ then : select interpreter to start Jupyter -> then can open python interactive w
    to switch between vim and normal mode
    
 * Go to keyboard shortcuts and add ```Ctrl+Alt+P``` for opening python interactive window
+
+* Go to user settings -> look for Notebook File Root and change it to ```${workspaceFolder}``` 
+(this will open interactive window in the root of the currently open project)
  
  * Shortcuts
  

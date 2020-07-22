@@ -118,3 +118,6 @@ find /dir -name file_name
 * ```chmod``` is used to change the access mode, see all options here https://www.computerhope.com/unix/uchmod.html for more info
 
 (stopped at the beginning of chapter 4)
+
+
+* ```clear``` to clear terminal screen output
