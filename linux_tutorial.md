@@ -121,3 +121,5 @@ find /dir -name file_name
 
 
 * ```clear``` to clear terminal screen output
+
+* ```application --version``` : check installed version of any application

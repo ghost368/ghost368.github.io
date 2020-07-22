@@ -66,7 +66,7 @@ This scenario requires three individual handlers where each handler is responsib
 
 -----------------------
 
-# logging ```loguru``` (modern way)
+# logging with ```loguru``` (modern way)
 
 * basic usage:
 

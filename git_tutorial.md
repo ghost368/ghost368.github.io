@@ -1,3 +1,10 @@
+* after installing git need to initialize config
+
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
 * ```git init``` to create a repo
 
 * A commit is a full snapshot of the repository, that is saved in the
@@ -175,6 +182,12 @@ git push origin master dev # Updates remote’s mater and dev branches
 git push origin --tags # Sends tags to remotes
 ```
 
+* before running ```pull``` for the first time run 
+
+```
+git branch --set-upstream-to=origin/<branch> master
+```
+
 
 * Cloning
 
@@ -258,7 +271,8 @@ git ca -m 'Commit message'
 ```
 
 
-
+* in .gitignore: if a folder is specified - it will be ignored in all nested subfolders as well, 
+can add multiple .gitignore files in various subfolders to apply this ignore logic to all of them
 
 
 
