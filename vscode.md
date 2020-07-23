@@ -70,7 +70,6 @@ then : select interpreter to start Jupyter -> then can open python interactive w
    then Ctrl+Shift+P -> Open keyboard shortcuts -> search to toggleVim -> add Alt+Shift+V shortcut 
    to switch between vim and normal mode
    
-* Go to keyboard shortcuts and add ```Ctrl+Alt+P``` for opening python interactive window
 
 * Go to user settings -> look for Notebook File Root and change it to ```${workspaceFolder}``` 
 (this will open interactive window in the root of the currently open project)
@@ -120,7 +119,30 @@ then : select interpreter to start Jupyter -> then can open python interactive w
           "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection && !notebookEditorFocused"
       }
   ```
- 
+
+* set keyboard shortcut Clear All Notifications to Shift+Alt+N
+
+* set setting Collapse Cell Input by default to false 
+
+* set Python interactive window keybindings
+  - Ctrl+Shift+Alt+P : start PIW
+  - Ctrl+Shift+Alt+R : restart PIW
+  - Ctrl+Shift+Alt+0 : clear PIW output
+  - Ctrl+Shift+Alt+C : collapse all input cells
+  - Ctrl+Shift+Alt+V : expand all input cells     
+
+* set Refresh Explorer to Ctrl+Shift+Alt+N
+
+* Change Open debug console shortcut to Ctrl+; (to be similar to terminal Ctrl+')
+
+* Change Ctrl+1/2/3 to Alt+1/2/3 (Alt+nb is for tabs inside the same window -- not very useful, first 3 nbs is enough, can change all to 9 of course)
+
+
+* To debug script of module use F5 - input script name or module name (module relative path is not supported so it must be in the current path - use ```. cwd-to-pypath``` in the currenly open terminal session in the parent dir); 
+debug with stop at error or exception; 
+use Shift+F5 to stop
+
+
 * Shortcuts
  
 | Shortcut | Action |
@@ -137,8 +159,8 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 |Ctrl+Shift+T| Open keyboard shortcuts|
 |Ctrl+Shift+ slash| Split editor window vertically|
 |Ctrl+Alt+ left/right| Moving files between views in split mode|
-|Ctrl+Shift+Y| Open debug console|
 |Ctrl =/-| increase/descrease font in editor and consoles|
+|Ctrl+F4| Close application tab (like settings, keybindings etc)|
 
 
 
