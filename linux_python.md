@@ -18,8 +18,4 @@ python3 -m pipx ensurepath
 sudo apt-get install python3-venv
 ```
 
-* poetry - inside base
 
-```
-pipx install poetry
-```

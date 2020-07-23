@@ -274,7 +274,15 @@ git ca -m 'Commit message'
 * in .gitignore: if a folder is specified - it will be ignored in all nested subfolders as well, 
 can add multiple .gitignore files in various subfolders to apply this ignore logic to all of them
 
+* .gitignore example for vscode python package
 
+```
+.env/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.vscode/
+```
 
 --------
 

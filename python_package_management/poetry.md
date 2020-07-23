@@ -77,4 +77,9 @@ highly recommened to use this project template (!)
 
 Full information on python-poetry.org
 
+--------
 
+## Questions:
+
+- how to install specific version from folder with various tar.gz files (e.g. like qmspy was distributed)
+- learn other ways for package distribution (e.g. setup.py, distutils) - how they interact with poetry?? e.g. install local package distributed using another system to poetry package?

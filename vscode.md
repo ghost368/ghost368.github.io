@@ -74,20 +74,30 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 
 * Go to user settings -> look for Notebook File Root and change it to ```${workspaceFolder}``` 
 (this will open interactive window in the root of the currently open project)
+
+* Install Python Docstring Generator Extension
+
+* Go to keyboard shortcuts, add Shift+Alt+D shortcut for Debug Current Cell
+
+* Set Ctrl+Alt+Shift+0 shortcut to clear all python cell output
+* can use %reset magic to restart window
  
- * Shortcuts
+* Shortcuts
  
 | Shortcut | Action |
 | ------------ | ------------- |
 | Alt + Shift + nb columns| Split view into multiple columns |
 | Ctrl + col nb| Switch cursor to certain column |
-| Ctrl+Shift+'| Open terminal|
+| Ctrl+Shift+'| Open new terminal|
+| Ctrl+'| Open current terminal (works in vim mode)|
 | Ctrl + J| Hide/show terminal window|
 | Ctrl + B| Hide/show sidebar|
 |Ctrl+Shift+X| Open extensions|
 |Ctrl+Shift+E| Open side explorer|
+|Ctrl+Shift+G| Open git explorer|
 |Ctrl+Shift+ slash| Split editor window vertically|
 |Ctrl+Alt+ left/right| Moving files between views in split mode|
+|Ctrl+Shift+Y| Open debug console|
 
 
 

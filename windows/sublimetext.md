@@ -60,3 +60,44 @@ press Ctrl+Alt+Shift+t to open powershell in the current project folder (if e.g.
 
 
 * Ctrl+P : go to anything (including the currently open files)
+
+
+* To use vim inside sublime 
+	- remove Vintage and/or ActualVim from ignored packages in settings json file
+	- add the following to keybindings to map Esc to jk
+	```
+	{ "keys": ["j", "k"], "command": "exit_insert_mode",
+            "context":
+            [
+                { "key": "setting.command_mode", "operand": false },
+                { "key": "setting.is_widget", "operand": false }
+            ]
+    }
+	``` 
+
+* to create command to toggle vim on/off
+	- add this file (named anyway, e.g. toggle_vintage_command.py)
+	```
+	import sublime
+	import sublime_plugin
+
+	class ToggleVintageCommand(sublime_plugin.TextCommand):
+	    def run(self, edit):
+	        settings = sublime.load_settings('Preferences.sublime-settings')
+	        ignored = settings.get("ignored_packages")
+	        if "Vintage" in ignored:
+	            ignored.remove("Vintage")
+	        else:
+	            ignored.append("Vintage")
+	        settings.set("ignored_packages", ignored)
+    ```
+    to Packages/User (will open when running Browse Packages in sublime)
+
+    - add the following key binding
+    ```
+    { "keys": ["shift+alt+v"], "command": "toggle_vintage" }
+    ```
+
+
+* it's possible to add custom commands or settings to sublime in this way
+(see more details here https://stackoverflow.com/questions/24276143/can-i-create-my-own-command-in-sublime-and-how-to-associate-python-implementatio)
