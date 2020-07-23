@@ -95,6 +95,7 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 |Ctrl+Shift+X| Open extensions|
 |Ctrl+Shift+E| Open side explorer|
 |Ctrl+Shift+G| Open git explorer|
+|Ctrl+Shift+T| Open keyboard shortcuts|
 |Ctrl+Shift+ slash| Split editor window vertically|
 |Ctrl+Alt+ left/right| Moving files between views in split mode|
 |Ctrl+Shift+Y| Open debug console|
