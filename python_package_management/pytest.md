@@ -54,3 +54,10 @@ def test_add(input1, input2, output):
 
 * if some pre-saved is needed for tests: create subfolder in the tests folder with the same name as test .py module and store the expected input/output there, 
 if those data will be used for testing multiple function - write a fixture (!) for loading it just once!
+
+
+* running ```pytest --pdb``` will drop to pdf on any error during tests
+
+* can use ```pytest.set_trace()``` to set breakpoints in test code, that will later be used if ```pytest --pdb``` is run
+
+* install ```pdbpp``` package (add to poetry dev dependencies) to get better console debugger when using ```pytest --pdb```

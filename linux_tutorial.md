@@ -61,7 +61,11 @@ shows full path
 
 * ```su``` command means switch user
 
-* ```export PATH=$PATH:/some/paths``` changes the value of PATH but only in the current session ($PATH means we append to existing PATH)
+* ```export PATH=$PATH:/some/paths``` changes the value of PATH but only in the current session ($PATH means we append to existing PATH);
+if export is used inside a script, the change to path will only be visible inside this script.
+
+* bash vs source (!)  (or no precommand for bash and . for source):
+bash creates a sub-shell which source runs the script in the current shell (so e.g. export action inside script won't be applied to the current session if run with bash; in other words source will run as we copy and run the script content in the current session)
 
 * There are different shells
 	- sh : the original Unix shell
@@ -123,3 +127,12 @@ find /dir -name file_name
 * ```clear``` to clear terminal screen output
 
 * ```application --version``` : check installed version of any application
+
+
+* create script to add current working dir to python path with 
+```
+#!/bin/bash
+
+export PYTHONPATH="$PYTHONPATH:$(pwd)"
+```
+(source it before running python scripts with pdf option)

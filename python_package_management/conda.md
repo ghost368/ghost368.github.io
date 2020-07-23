@@ -74,3 +74,29 @@ conda install -c conda-forge rasterio=0.35
 * various channels can have different versions of the same package
 * PyPI is standard python package repo, conda channels are multiple, and can have non-standardized packages
 * some packages are not in PyPI, but can be in some conda channel
+
+
+* script to get conda version of a single package
+
+conda-v.py
+
+```
+import subprocess
+import re
+import sys
+out = subprocess.Popen(['conda', 'list'], 
+                        stdout=subprocess.PIPE, 
+                        stderr=subprocess.STDOUT)
+stdout,stderr = out.communicate()
+package_name = sys.argv[1]
+version = re.match(f'(?:.*\n)*{package_name}\s*(\S*)(?:.*\n.*)*', stdout.decode('utf-8')).group(1)
+print(re.sub(' +', '  ', f'{package_name} {version}'))
+```
+
+conda-v
+
+```
+#!/bin/bash
+
+python conda-v.py "$1"
+```

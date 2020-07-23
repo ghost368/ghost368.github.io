@@ -81,6 +81,45 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 
 * Set Ctrl+Alt+Shift+0 shortcut to clear all python cell output
 * can use %reset magic to restart window
+
+
+* Add Debug: Disconnect shortcut : Ctrl+Shift+F10
+
+* Run Open Keyboard Shortcuts (JSON) - to open json file (not menu)
+
+* Set up commands to run code
+
+  - run current line or selection in terminal (ipython) - may be useful occasionally
+
+  ```
+  {
+          "key": "alt+enter",
+          "command": "python.execSelectionInTerminal",
+          "when": "editorTextFocus && !findInputFocussed &&  !replaceInputFocussed && editorLangId == 'python'"
+  }
+  ```
+
+  - run current line or selection in python interactive window
+
+  ```
+      {
+          "key": "ctrl+shift+enter",
+          "command": "python.datascience.runcurrentcelladvance",
+          "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection && !notebookEditorFocused"
+      }
+  ```
+
+  - Ctrl+Enter : run current cell  - by default (cell commands only apply to interactive window)
+
+  - Run cell and advance
+
+  ```
+      {
+          "key": "shift+enter",
+          "command": "-python.datascience.runcurrentcelladvance",
+          "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection && !notebookEditorFocused"
+      }
+  ```
  
 * Shortcuts
  
@@ -99,7 +138,7 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 |Ctrl+Shift+ slash| Split editor window vertically|
 |Ctrl+Alt+ left/right| Moving files between views in split mode|
 |Ctrl+Shift+Y| Open debug console|
-
+|Ctrl =/-| increase/descrease font in editor and consoles|
 
 
 
