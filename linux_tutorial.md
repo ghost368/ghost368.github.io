@@ -136,3 +136,12 @@ find /dir -name file_name
 export PYTHONPATH="$PYTHONPATH:$(pwd)"
 ```
 (source it before running python scripts with pdf option)
+
+* single Tab will autocomplete file or command name, while if there're multiple options a double Tab will show all options
+
+* mkdir -p /a/b/c to create nested directories
+
+
+* run ```bind TAB:menu-complete``` : this will cycle through dir contents when using cd and already being inside dir (will autocomplete part names as usual of course); use right arrow to fix choice
+
+* in general, above function is menu-complete -- using bind it's possible to bind a command to a key

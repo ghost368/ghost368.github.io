@@ -14,3 +14,5 @@
 |Ctrl + down| move the cursor to the beginning of the next paragraph (same for up) | 
 
 More windows shortcuts:  https://www.windowscentral.com/best-windows-10-keyboard-shortcuts
+
+* remove Shift+Alt shortcut to switch languages (will conflict with vscode shortcuts), use Win+Space instead

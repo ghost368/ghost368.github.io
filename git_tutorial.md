@@ -307,7 +307,67 @@ HEAD is a pointer to last commit of the current branch, from which the commit hi
 - so how to resolve conflicts with remote, and how to visualize code where the conflict happened??
 
 
+-------------------------
 
+# old - check and remove
+
+### Connect to remote repo on linux
+
+* install git if needed
+```
+sudo apt-get install git
+```
+* run 
+```
+git close <URL>
+```
+and enter account password
+
+* run
+```
+ssh-keygen
+```
+to generate
+```
+~/.ssh/id_rsa
+~/.ssh/id_rsa.pub
+```
+then in the github account go to settings, SSHand GPG keys, 
+add new ssh key and put the content of id_rsa.pub to the key 
+field but without the username at the end
+
+* Then run
+```
+git config --global user.name "<your name>"
+git config --global user.email "<your e-mail>"
+```
+
+
+
+
+### Create a new repository locally and connect to remote 
+
+* Initialize the local directory as a Git repository.
+
+  ```git init```
+
+* Add the files in your new local repository. This stages them for the first commit.
+
+  ```git add --all```
+
+* Commit the files that you’ve staged in your local repository.
+
+  ```git commit -m "initial commit```
+
+* Copy the https url of your newly created repo. In the Command prompt, add the URL for the remote repository where your local repository will be pushed.
+
+  ``` git remote add origin remote repository URL```
+
+  ```git remote -v```
+
+* Push the changes in your local repository to GitHub.
+
+  ```git push -f origin master```
 
 
 

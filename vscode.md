@@ -142,6 +142,9 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 debug with stop at error or exception; 
 use Shift+F5 to stop
 
+* add shortcut Ctrl+Alt+J for toggle Maximized Panel (maximized terminal panel)
+
+* add shortcut Alt+Shift+F10 for Run to cursor in debug
 
 * Shortcuts
  
@@ -162,7 +165,7 @@ use Shift+F5 to stop
 |Ctrl =/-| increase/descrease font in editor and consoles|
 |Ctrl+F4| Close application tab (like settings, keybindings etc)|
 
-
+* add shortcut Shift+Alt+B to remove all breakpoints  
 
 
 

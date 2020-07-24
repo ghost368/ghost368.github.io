@@ -1,8 +1,16 @@
-* mappings 
+* add to ~/.vimrc 
 
-```imap jk <Esc>```
+```
+imap jk <Esc>
+set number
+set wildmode=longest,list,full
+set wildmenu
+```
+(map esc to jk, show line numbers in files, activate tab autocomplete)
 
 
+
+--------------------
 
 * vscode mappings (add to settings json)
 
@@ -93,6 +101,7 @@ u/Ctrl+r : undo/redo
 
 
 * horizontal moves
+
 |command |action|
 |------|--------|
 |f char| move to the next char in the current line (F for previous)|
@@ -113,6 +122,24 @@ but can leave mark with ```mg```, go elsewhere and then go back with ````g```
 * daw caw - delete the word around the cursor (and switch to insert for caw)
 
 * can copy and paste content using y and p combined with other commands between different files in vscode
+
+
+-------------------------------------------
+
+## working with multiple tabs
+
+* run ```:tabe``` followed by file path to edit another file 
+
+* tab autocomplete (see ~/.vimrc modif at the beginning) help with file path:
+	- tab will auto comlete a level or
+	- tab will show possible options if non-unique 
+	- then pressing tab will cycle through possible options
+	- use right arrow to confirm (or press Enter to enter a different file manager mode)
+
+* when multiple tabs are open : use ```g t```, ```g T``` to swictch between tabs
+
+* use usual q, wq, q! to exit each tab, or qa, wqa, etc to quit all tabs
+
 
 
 
