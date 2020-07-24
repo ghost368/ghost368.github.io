@@ -1,6 +1,6 @@
-On server linux:
+* On server linux:
 
-Validate is whether ssh on the X client is configured to forward X11, ensure “/etc/ssh/ssh_config” has the following values.
+validate is whether ssh on the X client is configured to forward X11, ensure “/etc/ssh/ssh_config” has the following values.
 
 ```
 X11Forwarding yes
@@ -10,7 +10,7 @@ PrintLastLog yes
 TCPKeepAlive yes
 ```
 
-And then restart the ssh service:
+and then restart the ssh service:
 
 ```
 sudo service ssh restart

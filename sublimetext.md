@@ -1,4 +1,3 @@
-* Installation: download installer and follow the guide
 
 * Color Scheme: Install Colorsublime package, then install NetBeans scheme
 

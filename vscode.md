@@ -1,11 +1,9 @@
-* Installation
-  * Linux
-  * Windows
-  download installer and follow the instructions
-  
-  
+# VSCode setup intructions
+
 * Color theme
  Ctrl+Shift+P -> Color Scheme -> choose Light (Visual Studio)
+
+---------------------------
  
 * Install Python extension
  
@@ -14,10 +12,11 @@
 * Open project -> Select Interpreter
  be sure jupyter is installed in the environment
  
-then : select interpreter to start Jupyter -> then can open python interactive window
+  then : select interpreter to start Jupyter -> then can open python interactive window
 
 * Ctrl+Shift+P -> Settings -> Send selection to interactive window -> Check the box
  
+---------------------------
  
 * Adding black python formatter
     - go to user settings and search python formatting provider -> select black
@@ -26,14 +25,14 @@ then : select interpreter to start Jupyter -> then can open python interactive w
     - in user settings look for 'format on save' and check the box (now Format will apply at each saving)
     - in user settings search for Black Args and add ```--skip-string-normalization``` (to avoid using " ")
     
-* Create new file: Ctrl+N -> Ctrl+S -> specify the path and the file name
 
 * Install extensions:
   - html preview, Ctrl+K V to preview html
   - vscode-pdf to view pdfs
  
- 
-* Using jupyter notebook
+-------------------------
+
+* jupyter notebook exporting to other formats (setup)
   - need latex to convert to pdf, run 
   
   ```
@@ -61,7 +60,8 @@ then : select interpreter to start Jupyter -> then can open python interactive w
   - can use ``` --to pdf, --to html, --to latex ``` etc
   - can add ``` --no-input --no-prompt ``` to skip code and cell numbers respectively
   
-  
+-------------------------------------------------
+
  
  * Install relative line number extension
  run Ctrl+Shift+P -> enable relative line number
@@ -70,6 +70,8 @@ then : select interpreter to start Jupyter -> then can open python interactive w
    then Ctrl+Shift+P -> Open keyboard shortcuts -> search to toggleVim -> add Alt+Shift+V shortcut 
    to switch between vim and normal mode
    
+------------------------------------------------
+
 
 * Go to user settings -> look for Notebook File Root and change it to ```${workspaceFolder}``` 
 (this will open interactive window in the root of the currently open project)
@@ -124,6 +126,9 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 
 * set setting Collapse Cell Input by default to false 
 
+
+* Create new file: Ctrl+N -> Ctrl+S -> specify the path and the file name
+
 * set Python interactive window keybindings
   - Ctrl+Shift+Alt+P : start PIW
   - Ctrl+Shift+Alt+R : restart PIW
@@ -138,6 +143,9 @@ then : select interpreter to start Jupyter -> then can open python interactive w
 * Change Ctrl+1/2/3 to Alt+1/2/3 (Alt+nb is for tabs inside the same window -- not very useful, first 3 nbs is enough, can change all to 9 of course)
 
 
+---------------------------------
+
+
 * To debug script of module use F5 - input script name or module name (module relative path is not supported so it must be in the current path - use ```. cwd-to-pypath``` in the currenly open terminal session in the parent dir); 
 debug with stop at error or exception; 
 use Shift+F5 to stop
@@ -146,7 +154,12 @@ use Shift+F5 to stop
 
 * add shortcut Alt+Shift+F10 for Run to cursor in debug
 
-* Shortcuts
+* add shortcut Shift+Alt+B to remove all breakpoints  
+
+
+---------------------------------------------------
+
+* Shortcuts (vscode default)
  
 | Shortcut | Action |
 | ------------ | ------------- |
@@ -165,7 +178,6 @@ use Shift+F5 to stop
 |Ctrl =/-| increase/descrease font in editor and consoles|
 |Ctrl+F4| Close application tab (like settings, keybindings etc)|
 
-* add shortcut Shift+Alt+B to remove all breakpoints  
 
 
 
