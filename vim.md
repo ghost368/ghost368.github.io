@@ -141,6 +141,9 @@ but can leave mark with ```mg```, go elsewhere and then go back with ````g```
 * use usual q, wq, q! to exit each tab, or qa, wqa, etc to quit all tabs
 
 
+* to command multiple lines (e.g. in python)
+	- use Ctrl+V to vertically select the first symbols of the lines to comment
+	- then Shift+I -> type ```# ``` -> Esc to exit visual mode
 
 
 

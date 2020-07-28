@@ -369,7 +369,15 @@ git config --global user.email "<your e-mail>"
 
   ```git push -f origin master```
 
+---------------------------------------
+
+* use ```git reset``` to unstage all files (addit with ```git add```)
 
 
+* if while connecting git local repo and remote getting the following
+``` fatal: refusing to merge unrelated histories ```
 
-
+simply run 
+```
+git pull --allow-unrelated-histories
+```

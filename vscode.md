@@ -157,6 +157,102 @@ use Shift+F5 to stop
 * add shortcut Shift+Alt+B to remove all breakpoints  
 
 
+* open remote settings -> add the following to remote settings.json
+```
+ "python.dataScience.alwaysTrustNotebooks": true
+```
+
+
+* to write markdown in a vscode cell
+  - start with ```#%% [markdown]```
+  - write markdown code in comments, such as ```# * first item```
+
+
+
+
+* install regreplace extension 
+  - add the code below to settings.json to help with black lines while converting cell .py file to jupyter notebook
+  - put on-save to false, only run at the very end before convertion (Ctrl+Shift+P -> run regreplace)
+```
+ "regreplace.commands": [
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "# %%",
+            "global": true,
+            "replace": "#%%"
+        },
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "\n\n\n\n\n#%%",
+            "global": true,
+            "replace": "\n#%%"
+        },
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "\n\n\n\n#%%",
+            "global": true,
+            "replace": "\n#%%"
+        },
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "\n\n\n#%%",
+            "global": true,
+            "replace": "\n#%%"
+        },
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "\n\n#%%",
+            "global": true,
+            "replace": "\n#%%"
+        },
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "#%%\n\n\n\n\n",
+            "global": true,
+            "replace": "#%%\n"
+        },
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "#%%\n\n\n\n",
+            "global": true,
+            "replace": "#%%\n"
+        },
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "#%%\n\n\n",
+            "global": true,
+            "replace": "#%%\n"
+        },
+        {
+            "name": "jupyter.export.helper",
+            "language": "python",
+            "regexp": "#%%\n\n",
+            "global": true,
+            "replace": "#%%\n"
+        }
+    ],
+    "regreplace.on-save": false
+```
+
+* to write a markdown cell
+```
+#%% [markdown]
+"""
+## Header
+* add any markdown content
+* second item
+  - subitem
+"""
+```
+
 ---------------------------------------------------
 
 * Shortcuts (vscode default)
