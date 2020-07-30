@@ -80,6 +80,11 @@ python -m pdb -m module
 	open code files in vim in one window and pdb debug in the other
 	* can use post-mortem for terminal commands with ```-m pdb``` if that's enough (run and press continue)
 	* or go to ipython -> run command that breaks -> use pdb post-mortem with %debug to check variables
+	* in ipython use %debug with arguments
+	```
+	%debug -b file_path:line_nb statement
+	```
+	(can omit breakpoint -b, statement is any python function call or command)
 	* otherwise can use ipdb.run(..) and go step-by-step -- useful to look at file in vim and see the line numbers :
 	
 		can use them to run ```j line_mb``` and ```b file_path: line_nb``` to jump or set breakpoints to stop 

@@ -100,3 +100,5 @@ conda-v
 
 python conda-v.py "$1"
 ```
+
+* can also simply use ```conda list numpy``` etc to check single package version

@@ -61,3 +61,24 @@ if those data will be used for testing multiple function - write a fixture (!) f
 * can use ```pytest.set_trace()``` to set breakpoints in test code, that will later be used if ```pytest --pdb``` is run
 
 * install ```pdbpp``` package (add to poetry dev dependencies) to get better console debugger when using ```pytest --pdb```
+
+
+* to mock absent context (like plot backend, running JVM, etc) use ```unittest.mock```, e.g.
+```
+from unittest.mock import patch 
+import pytest 
+import matplotlib.pyplot as plt 
+
+def plot_fn():
+    plt.plot([1,2,3])
+    plt.show()
+
+@patch("matplotlib.pyplot.show")
+def test_plot_fn(mock_show):
+    plot_fn()
+```
+(**learn more on this**)
+
+* to test failure with exception (that's expected) - use ```pytest.raises```
+
+* pytest >= 6.0 maybe buggy with poetry and toml files, using ^5.0 for now

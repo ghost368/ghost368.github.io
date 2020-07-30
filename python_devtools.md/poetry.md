@@ -77,6 +77,8 @@ highly recommened to use this project template (!)
 
 Full information on python-poetry.org
 
+
+* when removing a package or changing version need to put ```--dev``` option if the package is in dev-dependencies
 --------
 
 ## Questions:
