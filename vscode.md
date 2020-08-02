@@ -76,7 +76,7 @@
 * Go to user settings -> look for Notebook File Root and change it to ```${workspaceFolder}``` 
 (this will open interactive window in the root of the currently open project)
 
-* Install Python Docstring Generator Extension
+* Install Python Docstring Generator Extension, use Ctrl+Shift+2 to generate docstring
 
 * Go to keyboard shortcuts, add Shift+Alt+D shortcut for Debug Current Cell
 

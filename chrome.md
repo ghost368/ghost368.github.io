@@ -23,6 +23,9 @@ to procrastinate
 * Hide download bar extension
 then use Ctrl+Shift+H to hide it
 
+* to change scale of the page (e.g. for jupyter notebook) : 
+use 'more' (triple circle in the top right) -> zoom
+
 
 # Shortcuts
 

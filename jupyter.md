@@ -39,8 +39,6 @@
 
 
 * to output every line - run
-
-
 ```
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -56,4 +54,10 @@ if 'ipython' in globals():
     print('\nWelcome to IPython!')
     ipython.magic('load_ext autoreload')
     ipython.magic('autoreload 2')
+```
+
+* to use all of the page width in jupyter
+```
+from IPython.core.display import display, HTML
+display(HTML("<style>.container { width:100% !important; }</style>"))
 ```
