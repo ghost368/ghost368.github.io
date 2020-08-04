@@ -258,11 +258,12 @@ git cherry-pick -x aba6c1b # Several commits can be cherry picked
 
 *  Adding 'add all and commit'
 
-run
+run (outside any git repo)
 
 ```
 git config --global alias.ca '!git add --all && git commit'
 ```
+(```git config --global --unset alias.ca``` to remove; works with any other alias)
 
 then use as
 
@@ -380,4 +381,9 @@ git config --global user.email "<your e-mail>"
 simply run 
 ```
 git pull --allow-unrelated-histories
+```
+
+* to correct last commit message
+```
+git commit --amend -m "New commit message."
 ```
