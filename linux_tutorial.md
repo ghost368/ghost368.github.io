@@ -145,3 +145,7 @@ export PYTHONPATH="$PYTHONPATH:$(pwd)"
 * run ```bind TAB:menu-complete``` : this will cycle through dir contents when using cd and already being inside dir (will autocomplete part names as usual of course); use right arrow to fix choice
 
 * in general, above function is menu-complete -- using bind it's possible to bind a command to a key
+
+* ```lscpu``` get CPU information (including the number or CPUs)
+
+* some CPUs now can do 2 or more things simultaneously, nb of CPUs times the number of simultaneous threads for each CPU is the number of *logical processors*

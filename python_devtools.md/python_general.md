@@ -74,3 +74,14 @@ to debug module or script in vscode use F5-ShiftF5 (choose to debug as script, o
 		- use %pdb to sell ipdb-drop at any error or exception
 		- use %debug to debug post-mortem right after a failed command
 	- debug module or script from command line use ```python -m pdb -m module_name``` or ```python -m pdb script.py```
+
+
+* profiling tools:
+	- install KCacheGrind ```sudo apt-get install -y kcachegrind```
+	- install ```pyprof2calltree``` from PyPI via pip (poetry)
+	- run in bash (which supports X11 if ssh is used)
+	```
+	python -m cProfile -o myscript.cprof myscript.py
+	pyprof2calltree -k -i myscript.cprof
+	```
+
