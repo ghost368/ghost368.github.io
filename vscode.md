@@ -1,9 +1,16 @@
 # VSCode setup intructions
 
 * Color theme
- Ctrl+Shift+P -> Color Scheme -> choose Light (Visual Studio)
+ Ctrl+Shift+P -> Color Scheme -> choose NetBeans light scheme
 
 ---------------------------
+
+* If working through remote ssh - need first to establish a connection, and then install extensions there (in the remote session):
+  - Ctrl+Shift+P -> add host and connect using ssh username@ip_address
+  - for virtualBox may need to create host-only adapter first and check a separate ip-address (```ip a``` in the terminal), localhost with port 2200 (default NAT adapter) may not work
+  - see ssh tutorial on how to connect using ssh-key and not being asked for password every time
+
+-------------------------------
  
 * Install Python extension
  

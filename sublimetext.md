@@ -100,3 +100,13 @@ press Ctrl+Alt+Shift+t to open powershell in the current project folder (if e.g.
 
 * it's possible to add custom commands or settings to sublime in this way
 (see more details here https://stackoverflow.com/questions/24276143/can-i-create-my-own-command-in-sublime-and-how-to-associate-python-implementatio)
+
+* to use SublimeText via remote connection using rmate:
+	- install rsub package in sublime (local)
+	- install rmate on the server (use sudo if necessary): 
+	```
+	wget -O /usr/local/bin/rsub \https://raw.github.com/aurora/rmate/master/rmate
+	chmod a+x /usr/local/bin/rsub
+	```
+	- create ssh tunnel via MobaXterm: port 52698 to 52698 (should work with both NAT and Host only adapter IP address), must make it Remote port forwarding (!)
+	- ```run rsub text_file``` to open remote file 

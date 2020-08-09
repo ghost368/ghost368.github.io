@@ -28,6 +28,8 @@ sudo service ssh status
 https://medium.com/platform-engineer/port-forwarding-for-ssh-http-on-virtualbox-459277a888be 
 for post-forwarding settings.
 
+* Use 127.0.0.1, port 2200 to connect via ssh (e.g. in MobaXterm)
+
 * To solve potential problems with resolution when using VM GUI application install guest additions on VM
 
 ```
