@@ -39,5 +39,6 @@ turn on "Clear cookies and site data when you quit Chrome"
 | Ctrl+L | put focus to the current tab search bar |
 | Alt + Left arrow | go to the previous page |
 | Ctrl + Shift + T | open latest closed tab|
+| Ctrl + Shift + I | inspect page|
 | Ctrl + PgUp/PgDn| switch tabs (more handy than Ctrl + Tab)|
 | Ctrl + Home/End | go to top/bottom of the page |

@@ -260,6 +260,11 @@ use Shift+F5 to stop
 """
 ```
 
+* to disable minimap : Ctrl+Shift+P -> toggle minimap
+
+
+* in settings Open folder in a new window -> switch to on (will open another folder without closing the current one)
+
 ---------------------------------------------------
 
 * Shortcuts (vscode default)
