@@ -149,3 +149,8 @@ export PYTHONPATH="$PYTHONPATH:$(pwd)"
 * ```lscpu``` get CPU information (including the number or CPUs)
 
 * some CPUs now can do 2 or more things simultaneously, nb of CPUs times the number of simultaneous threads for each CPU is the number of *logical processors*
+
+
+* can ```cd dir```, don't need to pass ```cd ./dir```
+
+* apt and apt-get commands are very similar, apt is indended for final users, while apt-get is a kind of back-end command with more backward compatibility requirements

@@ -82,3 +82,13 @@ def test_plot_fn(mock_show):
 * to test failure with exception (that's expected) - use ```pytest.raises```
 
 * pytest >= 6.0 maybe buggy with poetry and toml files, using ^5.0 for now
+
+* to run tests for a given package run ```python -m pytest [...]``` from cmd
+(running simply ```pytest [...]``` is similar but may have problems with import modules, it won't add current dir to path, etc)
+
+* to debug pytest run use
+```
+python -m pytest --pdb
+```
+if any errors occur, pdf will stop at error and it's possible to access variables; can also set trace in the code using
+pytest.set_trace() (to stop pdb there and then continue using usual commands s, n, c)

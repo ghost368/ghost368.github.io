@@ -283,6 +283,7 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 .vscode/
+.pytest_cache/
 ```
 
 --------
