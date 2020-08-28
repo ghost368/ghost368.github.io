@@ -74,6 +74,7 @@ u/Ctrl+r : undo/redo
 |command |action|
 |------|--------|
 |dw| Delete word from cursor position|
+|diw| Delete word with cursor inside|
 |D| Delete entire line from cursor position|
 |d| Delete entire line|
 |Y| Copies entire line|
@@ -146,6 +147,13 @@ but can leave mark with ```mg```, go elsewhere and then go back with ````g```
 	- then Shift+I -> type ```# ``` -> Esc to exit visual mode
 
 
+
+* install autocomplete for python in vim YouCompleteMe
+```
+sudo apt install vim-youcompleteme
+vim-addon-manager install youcompleteme
+```
+(may also need to install vim addon manager via sudo apt-get install)
 
 ----------------
 stopped at Searching (page 24)
