@@ -57,7 +57,7 @@ git commit --amend
 
 
 
-## commit log and changes
+## commit log, changes, files
 
 * ```git log``` to view commits 
 * ```git log -n 3``` to view e.g. last 3 commits
@@ -69,11 +69,28 @@ git commit --amend
 
 * each commit also saves a snapshot of the stage index at the moment of commit
 
+* ```git ls-files``` to specify a list of repo files (add -s to include staging code (SHA-1 hash) for each file)
+
+* blame is best to use via GUI and it allows to know the history of modification of particular file/lines (to later 'blame' the author), 
+the command itself won't do anything (safe to use, the name is somewhat misleading)
+
+
 ## HEAD ref
 
 * HEAD is a reference to the current git branch, and it's turn - to the last commit in this branch
 * if we checkout a specific commit (see further), this create a detached HEAD state, so that HEAD is not pointing to a specific branch
 * HEAD~1, HEAD~2 etc is equivalent to the commit codes 1, 2, etc steps before
+
+* ```HEAD~``` (remove one commit) will always work, but a conflit may happen if there are more than 1 parent (result of non-fast-forwarded merge), 
+in this case specify the parent number to use , like this (^2, i.e. second parent is used)
+```
+git reset --hard HEAD~2^2
+```
+
+* it is always prefered to use just ```HEAD~```
+
+
+
 
 ## branches
 
@@ -144,6 +161,8 @@ git tag -d <tag-name>
 
 ## git checkout
 
+* can be used with branch, with path or both, or a commit
+
 * ```git checkout branch_name``` move HEAD to a different branch
 * ```git checkout -b new_branch_name``` create new branch starting from the current HEAD (can be last commit of the current branch or a detached HEAD pointing to any commit)
 * ```git checkout commit_code``` move HEAD to specific commit (creates detached HEAD), instead of commit code can use HEAD~1 etc.
@@ -151,6 +170,15 @@ git tag -d <tag-name>
 * at detached HEAD we can experiment (make changes, create commits)
 * if we want to save these commits/staged index in a branch - can use ```git branch -b new_branch_name```, else go back to an existing branch (e.g. ```git checkout master```); 
 in this case the commits will be orphaned; any file changes will be still there but can undone using ```git reset```
+
+* ```git checkout commit_code file_name``` will restore the file to the stage index of the commit (thus undoing the working directory changes) - can be used without commit_code (defaults to HEAD, though there may be a conflict if file has the same name as a branch)
+
+* can also specify a specify SHA-1 (staging hash code) to revert file to (though it's rarely used)
+
+* ```git checkout .``` will undo all unstaged changes in the working directory (. means all files, 
+HEAD is the default commit)
+
+
 
 ## git revert
 
@@ -176,6 +204,9 @@ in this case the commits will be orphaned; any file changes will be still there 
 
   * --soft - moves the ref pointer, working directory is unchanges,  the intermediate removed commits are moved to stage index (so all changes removed will be now stages)
 
+  * can also specify file(s) to reset, need to specify HEAD explicitly, e.g.
+  ```git reset HEAD file_name``` (default is --mixed mode) will unstage a particular file (move from staging index to just working dir changes)
+
 
 ## git clean
 
@@ -185,48 +216,18 @@ in this case the commits will be orphaned; any file changes will be still there 
 * ```git clean -df``` remove with directories
 * ```git clean -xf``` remove including files from .gitignore (normally they're left untouched)
 
+## git rm 
 
------------------------------------------------------------------------------------
+* used to remove files either only from staging index or both from staging index and working directory
 
-## Undoing and deleting things
+* ```git rm file_name -f``` remove file
+* use -r (recursive) to remove dir with its content
+* if --cached is passed - remove the files only from the staged index
+* using ```git rm``` is a shortcut for linux rm plus staging change via ```git add```
 
+----------------------------------------------------
 
-
-* move file to the state of the last commit 
-
-```
-git checkout file_name
-```
-
-
-* deleting commits is done by moving HEAD or branch pointer
-
-* soft and hard reset (soft by default):
-if you make a soft reset, the commit(s) will be removed, but the modifications saved in that/those
-commit(s) will remain; and a hard reset, won’t leave change made in the commit(s).
-
-* to make reset use 
-
-```
-git reset --hard HEAD~
-```
-
-(that's to remove the last commit, use ```HEAD~3``` to remove more parent commits, e.g. 3 here)
-
-* ```HEAD~``` (remove one commit) will always work, but a conflit may happen if there are more than 1 parent (result of non-fast-forwarded merge), 
-in this case specify the parent number to use , like this (^2, i.e. second parent is used)
-```
-git reset --hard HEAD~2^2
-```
-
-* it is always prefer to use just ```HEAD~```
-
-
-
-
---------------------
-
-## Branching strategies
+## repo branching strategies
 
 * single main running version strategy:
 
@@ -236,13 +237,6 @@ git reset --hard HEAD~2^2
 	- separate branch is also recommended for each bug fix (can split and merge directly to master)
 
 
-
-
-* blame is best to use via GUI and it allows to know the history of modification of particular file/lines (to later 'blame' the author), 
-the command itself won't do anything (safe to use, the name is somewhat misleading)
-
-
------------------------
 
 ## Working with remote repos
 
@@ -351,6 +345,20 @@ git cherry-pick -x aba6c1b # Several commits can be cherry picked
 
 
 
+* if while connecting git local repo and remote getting the following
+``` fatal: refusing to merge unrelated histories ```
+
+simply run 
+```
+git pull --allow-unrelated-histories
+```
+
+* to correct last commit message
+```
+git commit --amend -m "New commit message."
+```
+
+
 *  Adding 'add all and commit'
 
 run (outside any git repo)
@@ -383,103 +391,13 @@ __pycache__/
 
 --------
 
-questions
-- what is HEAD, origin?
-HEAD is a pointer to last commit of the current branch, from which the commit history for a branch is read
+**questions**
 
 - common ancestor of branches? - what are the implications for merge, etc?
-
 - how exactly can I resolve merge conflict in a file?
-
-- what exactly are tags used for?
-
-- full options and args list of git commit, push, pull, add etc
-
 - git push w/o args is to origin and the current branch, right?
-
-- switching branches in vscode and sublime git projects (how to choose which branch contents to show??)
-
-- what happens if I move the HEAD pointer (delete last commit) and then push this change to remote?
-
 - so how to resolve conflicts with remote, and how to visualize code where the conflict happened??
-
-
--------------------------
-
-# old - check and remove
-
-### Connect to remote repo on linux
-
-* install git if needed
-```
-sudo apt-get install git
-```
-* run 
-```
-git close <URL>
-```
-and enter account password
-
-* run
-```
-ssh-keygen
-```
-to generate
-```
-~/.ssh/id_rsa
-~/.ssh/id_rsa.pub
-```
-then in the github account go to settings, SSHand GPG keys, 
-add new ssh key and put the content of id_rsa.pub to the key 
-field but without the username at the end
-
-* Then run
-```
-git config --global user.name "<your name>"
-git config --global user.email "<your e-mail>"
-```
+- what is ```git stash```
 
 
 
-
-### Create a new repository locally and connect to remote 
-
-* Initialize the local directory as a Git repository.
-
-  ```git init```
-
-* Add the files in your new local repository. This stages them for the first commit.
-
-  ```git add --all```
-
-* Commit the files that you’ve staged in your local repository.
-
-  ```git commit -m "initial commit```
-
-* Copy the https url of your newly created repo. In the Command prompt, add the URL for the remote repository where your local repository will be pushed.
-
-  ``` git remote add origin remote repository URL```
-
-  ```git remote -v```
-
-* Push the changes in your local repository to GitHub.
-
-  ```git push -f origin master```
-
----------------------------------------
-
-* use ```git reset``` to unstage all files (addit with ```git add```)
-
-
-* if while connecting git local repo and remote getting the following
-``` fatal: refusing to merge unrelated histories ```
-
-simply run 
-```
-git pull --allow-unrelated-histories
-```
-
-* to correct last commit message
-```
-git commit --amend -m "New commit message."
-```
