@@ -1,21 +1,41 @@
+## git setup
+
 * after installing git need to initialize config
 
 ```
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
+git config --global core.editor "vim"
 ```
 
-* ```git init``` to create a repo
+## git general information
 
-* A commit is a full snapshot of the repository, that is saved in the
+* git has three file levels:
+  - commits
+  - stage index
+  - working directory
+
+* commit is a full snapshot of the repository, that is saved in the
 database. Every state of the files that are committed, will be recoverable later at any moment
-
-* not all the repo has to be commited
-
-* *staging* - process of adding files to the index (via ```git add```)
 
 * git index is where the data that is going to
 be saved in the commit is stored temporarily, until the commit is done
+
+* working directory is the state of files in the git dir before they are staged or commited
+
+* any change in files is automatically reflected in the git working repository 
+
+* ```git status``` show the deltas between the three git trees
+
+
+## creating repo
+
+* ```git init``` to create a repo
+
+
+## staging
+
+* *staging* - process of adding files to the index (via ```git add```)
 
 * at first new or changed files are not selected to be committed
 
@@ -23,31 +43,51 @@ be saved in the commit is stored temporarily, until the commit is done
 * to undo add use ```git reset filename``` or ```git reset```
 
 
-* blame is best to use via GUI and it allows to know the history of modification of particular file/lines (to later 'blame' the author), 
-the command itself won't do anything (safe to use, the name is somewhat misleading)
-
+## committing
 
 * ```git commit -m "message"``` to commit
+
+* add the current change to the last commit (should be used locally)
+
+```
+git commit --amend
+```
+
+* orphaned commits - commits that are not on any branch (e.g. created at a detached HEAD, without later creating a new branch from them) - they will be cleared by git garbage collector (every 30 days)
+
+
+
+## commit log and changes
 
 * ```git log``` to view commits 
 * ```git log -n 3``` to view e.g. last 3 commits
 * ``git log --oneline``` to skip commit extra info (reduce to one line)
-
 * ```git log --all --graph --decorate --oneline``` to view commits nicely put in a graph
 
+* ```git diff``` difference between working directory and last commit
+* ```git show commit_code``` show different for a specific commit (can use HEAD, HEAD~1, direct code, etc)
+
+* each commit also saves a snapshot of the stage index at the moment of commit
+
+## HEAD ref
+
+* HEAD is a reference to the current git branch, and it's turn - to the last commit in this branch
+* if we checkout a specific commit (see further), this create a detached HEAD state, so that HEAD is not pointing to a specific branch
+* HEAD~1, HEAD~2 etc is equivalent to the commit codes 1, 2, etc steps before
+
+## branches
+
 * branch - independent development path
-
 * ```git branch new-branch``` create new branch
-
 * ```git branch -a``` list all branches
 * ```git branch -d branch_name``` delete local branch (while not being on it)
-* ```git push remote_name --delete branch_name``` delete remove branch (remote_name is usually origin)
-
-
-* ```git checkout new-branch``` start working with new branch
+* ```git checkout new-branch``` start working with new branch, 
 HEAD is now pointing to ```new-branch```
 
-* merge
+
+## merging branches
+
+* merge master branch with another branch
 
 ```
 git checkout master
@@ -59,8 +99,6 @@ git merge new-branch
 * ```--no-ff``` option avoids fast-forwarding, and show much more clear history, it is always advisable not to use fast-forward mode!
 
 * ```git branch -d new-branch``` - delete branch (usually when it was used for developing new feature and it's now merged to master)
-
---------------------------
 
 * confict arises during merge when it cannot be done automatically (same file part modified differently in two different branches)
 
@@ -77,7 +115,6 @@ three (from second-branch)
 ```
 need to resolve the conflict and run git add, git commit
 
-
 * knowing in advance which version to stay with, use
 
 ```
@@ -86,12 +123,9 @@ git merge -X <ours|theirs> <branch-name>
 use ours to stay with HEAD and theirs to stay with the other branch version
 
 
-* ```git diff``` difference between working directory and last commit
-
----------------------------------
 
 
-## Tags
+## tags
 
 * used to mark import points in the commit history
 * usually used for releases (final and also development stages)
@@ -102,16 +136,61 @@ use ours to stay with HEAD and theirs to stay with the other branch version
 git tag -a v0.1 -m ’v0.1 stable release, changes from...’
 ```
 
+* delete tag
 
----------
+```
+git tag -d <tag-name>
+```
+
+## git checkout
+
+* ```git checkout branch_name``` move HEAD to a different branch
+* ```git checkout -b new_branch_name``` create new branch starting from the current HEAD (can be last commit of the current branch or a detached HEAD pointing to any commit)
+* ```git checkout commit_code``` move HEAD to specific commit (creates detached HEAD), instead of commit code can use HEAD~1 etc.
+
+* at detached HEAD we can experiment (make changes, create commits)
+* if we want to save these commits/staged index in a branch - can use ```git branch -b new_branch_name```, else go back to an existing branch (e.g. ```git checkout master```); 
+in this case the commits will be orphaned; any file changes will be still there but can undone using ```git reset```
+
+## git revert
+
+* use to revert a commit that's already public in a forward way 
+* undo action will appear as a new commit
+* can select specific commit to undo (not necessarily the latest, the intermediate commits will be left untouched)
+* ```git revert commit_code``` will attemp to revert the commit, editor for commit message will open (similar to merge)
+* if file addition commit is reverted, the file will be deleted permanently (not left as unstaged!)
+
+
+## git reset
+
+* use to undo changes locally (never use for public pushed commits - this will leave other's local repos in a broken state with orphaned commits)
+
+* unlike checkout ```git reset``` will move HEAD pointer and also current branch ref pointer to a specified commit
+
+* ```git reset``` with commit defaults to HEAD
+
+* options:
+  * --hard means that all the work after the specified commit is removed and lost (meaning all subsequent commits, staged changes and unstaged changes are no longer present in the working directory)
+
+  * --mixed (default) - moves the ref pointer to the specified commit, stage index will move to the saved stage index of the commit, any changes w.r.t. the current working directory will remain as unstaged
+
+  * --soft - moves the ref pointer, working directory is unchanges,  the intermediate removed commits are moved to stage index (so all changes removed will be now stages)
+
+
+## git clean
+
+* used to remove untracked files
+* ```git clean -n``` dry run - shows what files would be removed
+* ```git clean -f``` remove untracked files
+* ```git clean -df``` remove with directories
+* ```git clean -xf``` remove including files from .gitignore (normally they're left untouched)
+
+
+-----------------------------------------------------------------------------------
 
 ## Undoing and deleting things
 
-* add the current change to the last commit
 
-```
-git commit --amend
-```
 
 * move file to the state of the last commit 
 
@@ -142,11 +221,7 @@ git reset --hard HEAD~2^2
 
 * it is always prefer to use just ```HEAD~```
 
-* delete tag
 
-```
-git tag -d <tag-name>
-```
 
 
 --------------------
@@ -160,6 +235,11 @@ git tag -d <tag-name>
 	- dev is merged with master after a set of features was developed that results in a stable version
 	- separate branch is also recommended for each bug fix (can split and merge directly to master)
 
+
+
+
+* blame is best to use via GUI and it allows to know the history of modification of particular file/lines (to later 'blame' the author), 
+the command itself won't do anything (safe to use, the name is somewhat misleading)
 
 
 -----------------------
@@ -202,6 +282,7 @@ git push origin --tags # Sends tags to remotes
 git branch --set-upstream-to=origin/<branch> master
 ```
 
+* ```git push remote_name --delete branch_name``` delete remove branch (remote_name is usually origin)
 
 * Cloning
 

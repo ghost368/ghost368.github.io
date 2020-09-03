@@ -36,6 +36,8 @@ add to KeyBindings
  { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} }
 ```
 
+* Do not add MarkdownEditing package since it will change color scheme (will be hard to restore)
+
 * add open folder shortcut to key bindings (folder will be added to the current window)
 
 ```
@@ -72,7 +74,7 @@ press Ctrl+Alt+Shift+t to open powershell in the current project folder (if e.g.
                 { "key": "setting.is_widget", "operand": false }
             ]
     }
-	``` 
+	```
 
 * to create command to toggle vim on/off
 	- add this file (named anyway, e.g. toggle_vintage_command.py)
@@ -110,3 +112,4 @@ press Ctrl+Alt+Shift+t to open powershell in the current project folder (if e.g.
 	```
 	- create ssh tunnel via MobaXterm: port 52698 to 52698 (should work with both NAT and Host only adapter IP address), must make it Remote port forwarding (!)
 	- ```run rsub text_file``` to open remote file 
+
