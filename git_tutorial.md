@@ -63,6 +63,7 @@ git commit --amend
 * ```git log -n 3``` to view e.g. last 3 commits
 * ``git log --oneline``` to skip commit extra info (reduce to one line)
 * ```git log --all --graph --decorate --oneline``` to view commits nicely put in a graph
+* ```git log --oneline --branches=*``` to include commits from all branches
 
 * ```git diff``` difference between working directory and last commit
 * ```git show commit_code``` show different for a specific commit (can use HEAD, HEAD~1, direct code, etc)
@@ -165,6 +166,7 @@ git tag -d <tag-name>
 
 * ```git checkout branch_name``` move HEAD to a different branch
 * ```git checkout -b new_branch_name``` create new branch starting from the current HEAD (can be last commit of the current branch or a detached HEAD pointing to any commit)
+* before detaching head need to commit or stash all current changes (to properly save the current state, so that it's not lost)
 * ```git checkout commit_code``` move HEAD to specific commit (creates detached HEAD), instead of commit code can use HEAD~1 etc.
 
 * at detached HEAD we can experiment (make changes, create commits)
@@ -391,13 +393,14 @@ __pycache__/
 
 --------
 
-**questions**
+**questions and further work**
 
 - common ancestor of branches? - what are the implications for merge, etc?
 - how exactly can I resolve merge conflict in a file?
 - git push w/o args is to origin and the current branch, right?
 - so how to resolve conflicts with remote, and how to visualize code where the conflict happened??
 - what is ```git stash```
+- next step is learn more about working with remote repo, origin etc
 
 
 
