@@ -12,7 +12,7 @@ database. Every state of the files that are committed, will be recoverable later
 
 * not all the repo has to be commited
 
-* *staging* - process of adding files to the index
+* *staging* - process of adding files to the index (via ```git add```)
 
 * git index is where the data that is going to
 be saved in the commit is stored temporarily, until the commit is done
@@ -20,16 +20,29 @@ be saved in the commit is stored temporarily, until the commit is done
 * at first new or changed files are not selected to be committed
 
 * ```git add file_name``` is used to add file to be committed (can use --all)
+* to undo add use ```git reset filename``` or ```git reset```
+
+
+* blame is best to use via GUI and it allows to know the history of modification of particular file/lines (to later 'blame' the author), 
+the command itself won't do anything (safe to use, the name is somewhat misleading)
+
 
 * ```git commit -m "message"``` to commit
 
-* ```git log``` to view commits
+* ```git log``` to view commits 
+* ```git log -n 3``` to view e.g. last 3 commits
+* ``git log --oneline``` to skip commit extra info (reduce to one line)
 
 * ```git log --all --graph --decorate --oneline``` to view commits nicely put in a graph
 
 * branch - independent development path
 
 * ```git branch new-branch``` create new branch
+
+* ```git branch -a``` list all branches
+* ```git branch -d branch_name``` delete local branch (while not being on it)
+* ```git push remote_name --delete branch_name``` delete remove branch (remote_name is usually origin)
+
 
 * ```git checkout new-branch``` start working with new branch
 HEAD is now pointing to ```new-branch```
@@ -146,6 +159,7 @@ git tag -d <tag-name>
 	- when feature is developed its branch is integrated with dev and removed
 	- dev is merged with master after a set of features was developed that results in a stable version
 	- separate branch is also recommended for each bug fix (can split and merge directly to master)
+
 
 
 -----------------------
