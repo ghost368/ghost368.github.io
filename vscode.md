@@ -77,6 +77,16 @@
    then Ctrl+Shift+P -> Open keyboard shortcuts -> search to toggleVim -> add Alt+Shift+V shortcut 
    to switch between vim and normal mode
    
+
+ * Add to settings.json
+ ```
+ "vim.handleKeys": {
+        "<C-f>": false,
+        "<C-h>": false
+    }
+  ```
+  (in general add any keys that I wan't to preserve from vscode in vim mode)
+
 ------------------------------------------------
 
 
@@ -286,7 +296,9 @@ use Shift+F5 to stop
 |Ctrl =/-| increase/descrease font in editor and consoles|
 |Ctrl+F4| Close application tab (like settings, keybindings etc)|
 
+--------------------------------------------------
 
+**big problem: how to make python refactoring : works ok inside a function, but not for global varialbles**
 
 
 

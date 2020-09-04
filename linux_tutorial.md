@@ -89,6 +89,9 @@ to see what shell is currently used
 
 * nautilus is the default file manager in Gnome, the GNU desktop
 
+ * ```stat filename``` check file stats (e.g. created, last modified etc)
+
+* ```ls | grep -P "^A.*[0-9]{2}$" | xargs -d"\n" rm```
 -----------------------------
 
 * create nested dir (with parents)

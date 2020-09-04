@@ -79,6 +79,9 @@ u/Ctrl+r : undo/redo
 |d| Delete entire line|
 |Y| Copies entire line|
 |yy| Copies entire line|
+|gd| go to function/variable definition|
+|gD| go to function/variable global definition|
+
 
 
 * modes: command, insert, command line and visual
@@ -154,6 +157,20 @@ sudo apt install vim-youcompleteme
 vim-addon-manager install youcompleteme
 ```
 (may also need to install vim addon manager via sudo apt-get install)
+
+
+* add 
+```vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>``` to .vimrc, they select text and 
+Ctrl+R to replace it (will be prompted to enter replacing text)
+
+
+* install ropevim code python code refactoring
+```
+sudo pip3 install rope ropemode ropevim
+wget -P ~/.vim/ https://raw.githubusercontent.com/python-rope/ropevim/master/ftplugin/python_ropevim.vim
+echo "source ~/.vim/python_ropevim.vim" >> ~/.vimrc
+```
+see command description here https://github.com/python-rope/ropevim
 
 ----------------
 stopped at Searching (page 24)
