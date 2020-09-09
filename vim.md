@@ -172,6 +172,41 @@ echo "source ~/.vim/python_ropevim.vim" >> ~/.vimrc
 ```
 see command description here https://github.com/python-rope/ropevim
 
+
+* install vim-slime and vim-ipython-cell
+	- need xclip and xsel
+	```
+	sudo apt-get install xclip xsel
+	```
+	- install using pathogen
+	```
+	cd ~/.vim/bundle
+	git clone https://github.com/jpalardy/vim-slime.git
+	git clone https://github.com/hanschen/vim-ipython-cell.git
+	```
+	- vim-ipython-cell page here https://github.com/hanschen/vim-ipython-cell
+
+----------------------------------------------------
+
+### vim mini-IDE
+
+* NERDTree
+
+* YouCompleteMe
+
+* RopeVim
+
+* vim-ipython-cell
+
+
+
+
+
+
+
+
+
+
 ----------------
 stopped at Searching (page 24)
 
