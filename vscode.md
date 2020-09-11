@@ -1,7 +1,7 @@
 # VSCode setup intructions
 
 * Color theme
- Ctrl+Shift+P -> Color Scheme -> choose NetBeans light scheme
+ Ctrl+Shift+P -> Color Scheme -> choose NetBeans light scheme (Ctrl+Shift+X -> search in extensions)
 
 ---------------------------
 
@@ -27,8 +27,8 @@
  
 * Adding black python formatter
     - go to user settings and search python formatting provider -> select black
-    - Ctrl+Shift+P -> Format Document -> follow black installation tip
-    - Now Format Document command will apply black
+    - Now create python files and go to Ctrl+Shift+P -> Format Document -> this will apply black
+    - Follow black installation tip
     - in user settings look for 'format on save' and check the box (now Format will apply at each saving)
     - in user settings search for Black Args and add ```--skip-string-normalization``` (to avoid using " ")
     
@@ -105,7 +105,7 @@
 
 * Run Open Keyboard Shortcuts (JSON) - to open json file (not menu)
 
-* Set up commands to run code
+* Set up commands to run code (add to keybindings.json)
 
   - run current line or selection in terminal (ipython) - may be useful occasionally
 
@@ -148,7 +148,7 @@
 
 * set Python interactive window keybindings
   - Ctrl+Shift+Alt+P : start PIW
-  - Ctrl+Shift+Alt+R : restart PIW
+  - Shift+Alt+R : restart PIW
   - Ctrl+Shift+Alt+0 : clear PIW output
   - Ctrl+Shift+Alt+C : collapse all input cells
   - Ctrl+Shift+Alt+V : expand all input cells     

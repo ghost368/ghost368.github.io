@@ -17,7 +17,7 @@ set wildmenu
 ```
 "vim.insertModeKeyBindings": [
      {
-         "before": ["j", "j"],
+         "before": ["j", "k"],
          "after": ["<esc>"]
      }
 ]
@@ -172,6 +172,12 @@ echo "source ~/.vim/python_ropevim.vim" >> ~/.vimrc
 ```
 see command description here https://github.com/python-rope/ropevim
 
+* install pathogen
+```
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
+
 
 * install vim-slime and vim-ipython-cell
 	- need xclip and xsel
@@ -183,6 +189,7 @@ see command description here https://github.com/python-rope/ropevim
 	cd ~/.vim/bundle
 	git clone https://github.com/jpalardy/vim-slime.git
 	git clone https://github.com/hanschen/vim-ipython-cell.git
+	git clone https://github.com/preservim/nerdtree.git
 	```
 	- vim-ipython-cell page here https://github.com/hanschen/vim-ipython-cell
 

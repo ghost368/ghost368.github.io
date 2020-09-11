@@ -29,6 +29,8 @@ use 'more' (triple circle in the top right) -> zoom
 * go to chrome://settings/content/cookies?search=cookies+and+site+data, 
 turn on "Clear cookies and site data when you quit Chrome"
 
+* when I connect to Google account, it automatically uploads all my installed extensions, 
+as well as settings (delete cookies when I quit, etc)
 
 # Shortcuts
 

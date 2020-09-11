@@ -1,4 +1,6 @@
 
+* Ctrl+Shift+P -> Install Package Control
+
 * Color Scheme: Install Colorsublime package, then install NetBeans scheme
 
 * Hide minimap
@@ -29,6 +31,8 @@ in the right panel add
 "font_face": "Consolas",
 "font_size": 12,
 ```
+(11 is ok for some machines)
+
 
 * Install MarkdownPreview package
 add to KeyBindings

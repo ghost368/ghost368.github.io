@@ -1,4 +1,10 @@
 
+* Install git, vim, curl using ```sudo apt-get install```
+
+* Change color background of the default gnome terminal (set black on white theme), make bright colour a bit darker
+
+* If right-click does not show New Document option fix it by adding empty file template to Home/Templates (in Ubuntu)
+
 
 * Installing sublime text (not recommended for ssh-x, better install on windows and use rmate)
 
