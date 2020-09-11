@@ -157,3 +157,5 @@ export PYTHONPATH="$PYTHONPATH:$(pwd)"
 * can ```cd dir```, don't need to pass ```cd ./dir```
 
 * apt and apt-get commands are very similar, apt is indended for final users, while apt-get is a kind of back-end command with more backward compatibility requirements
+
+* ```curl <url>``` command can be used to test web-page response message, e.g. when creating web api that returns json data (more handy than using browser)
