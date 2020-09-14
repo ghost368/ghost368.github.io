@@ -24,6 +24,17 @@ if nvidia-smi commands does not show anything or you want to change the driver v
 
 * compatibility tables for versions may be found online 
 
+* before install cuda, cudnn may be worth removing already installed old versions with all deps: use
+```
+sudo apt-get purge "cuda*"
+sudo apt-get purge "*cublas*"
+sudo apt-get autoremove
+sudo apt-get clean
+```
+(autoremove with remove all unused leftovers, purge differs from remove in that it removes dependencies)
+
+
+
 * also the official tensorflow site (https://www.tensorflow.org/install/gpu) has up-to-date instruction, e.g. here the one for Ubuntu 18.04
 (cd to folder where you are ok to download the .deb files)
 ```
