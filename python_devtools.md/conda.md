@@ -102,3 +102,12 @@ python conda-v.py "$1"
 ```
 
 * can also simply use ```conda list numpy``` etc to check single package version
+
+
+---------------------------------
+
+
+* conda python channels is a parallel package system to PyPi. It's run by Anaconda company.
+While the package that appear in PyPI (and is installed via pip, poetry) is uploaded by the package author, 
+conda channel version is run by Anaconda (thus the mirror of each new release will appear a bit later there).
+Conda channels are more popular with Data Science and ML community, not so much in other python applied areas.

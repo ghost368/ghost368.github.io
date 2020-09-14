@@ -64,7 +64,7 @@ shows full path
 * ```export PATH=$PATH:/some/paths``` changes the value of PATH but only in the current session ($PATH means we append to existing PATH);
 if export is used inside a script, the change to path will only be visible inside this script.
 
-* bash vs source (!)  (or no precommand for bash and . for source):
+* vs source (!)  (or no precommand for bash and . for source):
 bash creates a sub-shell which source runs the script in the current shell (so e.g. export action inside script won't be applied to the current session if run with bash; in other words source will run as we copy and run the script content in the current session)
 
 * There are different shells
@@ -159,3 +159,13 @@ export PYTHONPATH="$PYTHONPATH:$(pwd)"
 * apt and apt-get commands are very similar, apt is indended for final users, while apt-get is a kind of back-end command with more backward compatibility requirements
 
 * ```curl <url>``` command can be used to test web-page response message, e.g. when creating web api that returns json data (more handy than using browser)
+
+
+*```rm /path/to/dir/*``` to remove everything inside a directory (```rm ./*``` for the current dir)
+
+
+* ~/.bashrc is a script that is run whenever bash is started. So e.g. to always have some path in the PATH variable can append
+```
+export PATH=/some/extra/path:$PATH
+```
+to the .bashrc file
