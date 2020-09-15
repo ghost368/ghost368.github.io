@@ -80,6 +80,8 @@ the use .sel and slice(start, end) to select data w.r.t. the date
 * best way to process extract_date, dates in a data object : do I use pd.to_datetime or enforce a specific format 
 (ISO string, datetime.date object, etc)?????
 
+* questions related to extract and job processing, timezones, days, datetime, AP EU and US, sunday runs etc
+
 * GET, POST, PUT - go back again and make quizlet notes
 
 * explore xr.concat, xr.merge, etc
