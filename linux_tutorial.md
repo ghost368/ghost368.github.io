@@ -169,3 +169,8 @@ export PYTHONPATH="$PYTHONPATH:$(pwd)"
 export PATH=/some/extra/path:$PATH
 ```
 to the .bashrc file
+
+
+* wget is a command to download files (e.g. installers), simplest version : ```wget <url>``` download to the current directory
+
+* sudo apt-get autoremove, clean, purge, remove, update, apt-mark etc - ADD
