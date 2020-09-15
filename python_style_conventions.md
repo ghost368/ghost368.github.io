@@ -59,3 +59,27 @@ _load_fx_data_one, load_fx_data etc
 
 * typical problem : str_or_list decorator (think about, but if used one - always better to have smth very simple, or write directly)
 
+-----------------------------------------------------
+
+* avoid name like is_valid, be more specific
+
+
+
+
+## misc
+
+* create derived class instance from base class instance:
+	- changing __class__ attribute of the instance is a dirty trick
+	- best to use composition
+
+* xarray dataset : can convert date coordinate using pd.to_datetime to datetime64, 
+the use .sel and slice(start, end) to select data w.r.t. the date
+
+* strange behaviour of bools and ~ & | operators --- see https://stackoverflow.com/questions/13600988/python-tilde-unary-operator-as-negation-numpy-bool-array
+
+* best way to process extract_date, dates in a data object : do I use pd.to_datetime or enforce a specific format 
+(ISO string, datetime.date object, etc)?????
+
+* GET, POST, PUT - go back again and make quizlet notes
+
+* explore xr.concat, xr.merge, etc
