@@ -84,4 +84,6 @@ the use .sel and slice(start, end) to select data w.r.t. the date
 
 * GET, POST, PUT - go back again and make quizlet notes
 
+* create a list of things to remember during package development (logging, pytest, CLI, etc)
+
 * explore xr.concat, xr.merge, etc
