@@ -174,3 +174,8 @@ to the .bashrc file
 * wget is a command to download files (e.g. installers), simplest version : ```wget <url>``` download to the current directory
 
 * sudo apt-get autoremove, clean, purge, remove, update, apt-mark etc - ADD
+
+* finding files/folders in linux
+```
+ find . -name name_or_pattern
+ ```
