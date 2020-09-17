@@ -1,29 +1,5 @@
-* add to ~/.vimrc 
+### Shortcuts
 
-```
-imap jk <Esc>
-set number
-set wildmode=longest,list,full
-set wildmenu
-```
-(map esc to jk, show line numbers in files, activate tab autocomplete)
-
-
-
---------------------
-
-* vscode mappings (add to settings json)
-
-```
-"vim.insertModeKeyBindings": [
-     {
-         "before": ["j", "k"],
-         "after": ["<esc>"]
-     }
-]
-```
-
-* switching to Insert mode
 
 |command |action|
 |---------------|----------------|
@@ -36,119 +12,103 @@ set wildmenu
 |s| substitute single character at cursor|
 |S or cc| substitute the entire line|
 |C| substitute the rest of line starting from cursor|
-
-J : join current line with the next line
-
-* navigation
-
-|command |action|
-|---------------|----------------|
+|J|join current line with the next line |
 |j k h l| down up left right (can have nb in front)|
 |0 $| to line start/end|
 |^| to first non-blank line character|
 |g_| to last non-black character|
 |Ctrl+F/B| page down/up|
 |:n :$| to n-th line, to file end|
-
-* Vim keeps track of your navigation using a jump list. You can go backward and forward
-through that list
-
-Ctrl+O/Ctrl+i : jump previous/next position
-
-in VSCode vim: Atl left/right (general commands)
-
-
-* Cut, Copy and Paste
-
-|command |action|
-|------|--------|
+|d_| delete completely without copying|
+|{}|go to the previous/next blank line|
 |x| Delete character from cursor position|
 |X| Delete previous character from cursor position|
 |y| Copy single character from cursor position|
 |p| Paste character after cursor position|
 |P| Paste character before cursor position|
-
-
-u/Ctrl+r : undo/redo
-
-|command |action|
-|------|--------|
+|u/Ctrl+r|undo/redo|
 |dw| Delete word from cursor position|
 |diw| Delete word with cursor inside|
+|cw|Same as dw but go to insert mode, the same for other commands|
 |D| Delete entire line from cursor position|
 |d| Delete entire line|
 |Y| Copies entire line|
 |yy| Copies entire line|
 |gd| go to function/variable definition|
 |gD| go to function/variable global definition|
-
-
-
-* modes: command, insert, command line and visual
-
-
-* ```:edit file.txt``` create or edit file in the current dir using vim
-
-* ```:w``` save, ```:q``` quit, ```:q!``` quit w/o saving
-
-
-* b and w : go back forward one word
-* dd also saves the deleted text in the buffer (can be pasted with p, so it's like cut)
-
-* Shift + V : select line
-
-* v : go to visual mode
-
-
-* form command mode : / to start search, then Enter and use n/N to go through search results forward/backward
-* * (star) enable to search for the current word under cursor and use n/N to go through
-
-
-* horizontal moves
-
-|command |action|
-|------|--------|
+|b / w| go back forward one word (from alpha-numerics)|
+|B / W| go back forward one word (from non-whitespece chars, includes :,. etc)|
+|v| go to visual mode|
+|V| go to visual mode and select current line|
+|# *| to the previous/next occurent of the current token, add it to n/N search|
+|/smth + Enter|search for smth, then use n/N|
+|:%s/smth/replacement/gc| replace smth|
 |f char| move to the next char in the current line (F for previous)|
 |t char| move right before the next char in the current line (T for previous)|
 |: ,| go through results fwd/backwd after applying f, F, t, T|
+|zt, zb, zz| move current line to the top, bottom and center of the screen|
+|daw caw| delete the word around the cursor (and switch to insert for caw)|
+|<line number>G| jump to a specific line number (e.g. 32G)|
+
+* can combine commands and use e.g. vf, vt, vF, cF, cf, ct, dt, yF etc 
 
 
-* can use d with other commands (0 $ w b j k 10j etc) to delete,
-c with other commands : same as d but goes directly into insert mode after that
+* select to the next search result : v/text+enter - then use n/N to adjust selection; 
+the same will work with c, d, y etc 
+
+
+* to insert/delete smth vertically along multiple lines (e.g. in comment python)
+	- use Ctrl+V to vertically select the first symbols of the lines to comment
+	- then Shift+I -> type e.g. ```# ``` or anything, or select and remove -> Esc to exit visual mode
+	- in terminal vim the new characters will first appear in the first line, then appear in the other line after going normal mode
+
+* Ctrl+r is setup to replace the currently selected text
+* deleting also saves the deleted text in the buffer (can be pasted with p, so it's like cut, use d_ to avoid cutting)
+
+
+* can use d with other commands (0 $ w b j k 10j etc) to delete; 
+c with other commands : same as d but goes directly into insert mode after that;
+y will copy (yank), v will select
 
 
 * vim requires the cursor to be visible at all times (this is not true in VSCode vim though), 
-but can leave mark with ```mg```, go elsewhere and then go back with ````g``` 
+but can leave mark with ```mg```, go elsewhere and then go back with ```g``` 
 
-
-* zt, zb, zz : move current line to the top, bottom and center of the screen
-
-* daw caw - delete the word around the cursor (and switch to insert for caw)
 
 * can copy and paste content using y and p combined with other commands between different files in vscode
 
 
--------------------------------------------
-
-## working with multiple tabs
-
-* run ```:tabe``` followed by file path to edit another file 
-
-* tab autocomplete (see ~/.vimrc modif at the beginning) help with file path:
-	- tab will auto comlete a level or
-	- tab will show possible options if non-unique 
-	- then pressing tab will cycle through possible options
-	- use right arrow to confirm (or press Enter to enter a different file manager mode)
-
-* when multiple tabs are open : use ```g t```, ```g T``` to swictch between tabs
-
-* use usual q, wq, q! to exit each tab, or qa, wqa, etc to quit all tabs
+* Vim keeps track of your navigation using a jump list. You can go backward and forward
+through that list
+	- Ctrl+O/Ctrl+i : jump previous/next position
+	- most usefull when:
+		- used search, went to result, did smth there and want to go back
+		- went to function definition using ```gd```, then want to go back 
+		- if did some actions - several go-backs may be need to reach the previous place
 
 
-* to command multiple lines (e.g. in python)
-	- use Ctrl+V to vertically select the first symbols of the lines to comment
-	- then Shift+I -> type ```# ``` -> Esc to exit visual mode
+* to copy from vim terminal : usually Ctrl+Shift+C, Ctrl+Shift+V to paste into terminal
+(vim VSCode can switch off vim and select using mouse, this is a rare task)
 
+* to copy to vim : can use Ctrl+Shift+V or Ctrl+V depending on the system, editor;
+(in MobaXterm I setup for the paste be Shift+Space)
+
+
+### Terminal vim configuration
+
+* add to ~/.vimrc 
+
+```
+imap jk <Esc>
+set number
+set wildmode=longest,list,full
+set wildmenu
+```
+(map esc to jk, show line numbers in files, activate tab autocomplete)
+
+
+
+### Terminal vim plugins
 
 
 * install autocomplete for python in vim YouCompleteMe
@@ -159,9 +119,8 @@ vim-addon-manager install youcompleteme
 (may also need to install vim addon manager via sudo apt-get install)
 
 
-* add 
-```vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>``` to .vimrc, they select text and 
-Ctrl+R to replace it (will be prompted to enter replacing text)
+* to use Ctrl+R to replace selected text:
+add ```vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>``` to .vimrc
 
 
 * install ropevim code python code refactoring
@@ -193,21 +152,16 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	```
 	- vim-ipython-cell page here https://github.com/hanschen/vim-ipython-cell
 
-----------------------------------------------------
 
-### vim mini-IDE
-
-* NERDTree
-
-* YouCompleteMe
-
-* RopeVim
-
-* vim-ipython-cell
+* pluging allwing to use vim as mini-IDE
+	* NERDTree
+	* YouCompleteMe
+	* RopeVim
+	* vim-ipython-cell
 
 
 
-* add the following to .vimrc (slime and ipython-cell setup)
+* add the following to .vimrc (slime and ipython-cell configuration)
 ```
 "------------------------------------------------------------------------------
 " slime configuration 
@@ -239,17 +193,41 @@ nnoremap <F10> :IPythonCellExecuteCellJump<CR>
 
 
 
-----------------
-stopped at Searching (page 24)
+### file work
+
+
+* ```:e file.txt``` create or edit file in the current dir using vim
+* ```:w``` save, ```:q``` quit, ```:q!``` quit w/o saving
+* ```:e``` to renew an already open file
 
 
 
---------------------------
 
+### working with multiple tabs
 
-questions:
-- how to copy external content in vim mode
+* run ```:tabe``` followed by file path to edit another file 
 
-- understand better how copying with ```y``` works
+* tab autocomplete (see ~/.vimrc modif at the beginning) help with file path:
+	- tab will auto comlete a level or
+	- tab will show possible options if non-unique 
+	- then pressing tab will cycle through possible options
+	- use right arrow to confirm (or press Enter to enter a different file manager mode)
 
-- how to copy between different files in terminal vim
+* when multiple tabs are open : use ```g t```, ```g T``` to swictch between tabs
+
+* use usual q, wq, q! to exit each tab, or qa, wqa, etc to quit all tabs
+
+--------------------------------------
+
+### VSCode Vim 
+
+* mappings (add to settings json)
+
+```
+"vim.insertModeKeyBindings": [
+     {
+         "before": ["j", "k"],
+         "after": ["<esc>"]
+     }
+]
+```
