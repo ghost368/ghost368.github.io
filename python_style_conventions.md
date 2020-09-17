@@ -59,3 +59,10 @@ _load_fx_data_one, load_fx_data etc
 
 * typical problem : str_or_list decorator (think about, but if used one - always better to have smth very simple, or write directly)
 
+
+
+- its ok to put constants in uppercase at the beginning of a function, class (as attribute) or module (e.g. put inside a function if it's only used in this function)
+- if a constant used in a multiple modules : have a separate config file for this
+- a config file could be .py but as a general rule yaml file is preferred because .py is executable and is not suitable for config in serous apps (e.g. anything can be put there by hackers and the code will run by loading config, also sometimes low-priority users are allowed to change yaml config files, but not .py code files) : my convention - always use .yaml for config
+
+- let's use pd.Timestamp for single datetime and pd.to_datetime for arrays
