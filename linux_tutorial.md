@@ -179,3 +179,17 @@ to the .bashrc file
 ```
  find . -name name_or_pattern
  ```
+
+ * creating users:
+ 	* user in sudo group have admin rights, to check sudo group
+ 	```
+ 	grep -Po '^sudo.+:\K.*$' /etc/group
+ 	```
+ 	* create new user
+ 	``` sudo adduser username ```
+ 	* delete user (with its home dir) : ```sudo deluser --remove-home username```
+ 	* modify username ```usermod -l new_username old_username```
+ 	* change user password ```sudo passwd username```
+ 	* to switch user in the current session ```su - username``` (su command); 
+ 	then use logout to continue your session;
+ 	(```su username``` will switch user but keep me in my home dir; using ```-``` acts like if I would logout and login to another user properly) 

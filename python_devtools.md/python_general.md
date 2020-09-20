@@ -47,6 +47,8 @@ use e.g. ```python2 -m ... ``` to run with the latest python2 version (won't eve
 		- module can be run in the same way using ```python file_name.py``` and ```python -m file_name```
 		- package can only be run with ```-m``` option
 	- when running script (__main__.py file) the relative imports will not work, for this need to run module
+	- can also run package without -m, it will look for __main__.py inside and run it as script, relative imports will not work in this case
+	- __package__ variable shows what is the current package for relative imports; it will be None for scripts, '' for scripts run as scripts but inside some package (with __init__.py) and the package name (used for relative imports) if run as module with -m 
 
 
 
@@ -65,6 +67,12 @@ python [-c command | -m module-name | script | - ] [args]
 
 
 * it's possible to really run python script of module as main only from cmd (or its emulator inside python), inside other .py file can only use import
+
+
+
+-------------------------------------
+
+
 
 * can debug any function or cell inside vsdode, using cell debug;
 to debug module or script in vscode use F5-ShiftF5 (choose to debug as script, or as module if contains relative imports -- it will autostop at any error or exception)
