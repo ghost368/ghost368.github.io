@@ -193,3 +193,6 @@ to the .bashrc file
  	* to switch user in the current session ```su - username``` (su command); 
  	then use logout to continue your session;
  	(```su username``` will switch user but keep me in my home dir; using ```-``` acts like if I would logout and login to another user properly) 
+
+
+* ```rm -rf /path/to/dir?``` remove dir if exists otherwise do nothing
