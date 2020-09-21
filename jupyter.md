@@ -61,3 +61,12 @@ if 'ipython' in globals():
 from IPython.core.display import display, HTML
 display(HTML("<style>.container { width:100% !important; }</style>"))
 ```
+
+
+-------------------------------
+
+### Jupyter remote connection
+
+* create ssh tunnel (typically port will be 8888 or 8889)
+* from ssh terminal run ```jupyter notebook --no-browser```
+* this will create a link that can be accessed from the client (and will open client's browser)

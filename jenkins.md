@@ -9,6 +9,8 @@ in some cases there might be a GPG error (no public key), in this case add the k
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <your key>
 ```
+(where <your_key> is what the error message shows; then need to re-run update and install jenkins commands)
+
 also java might be needed for jenkins, install using 
 ```
 sudo apt install default-jdk

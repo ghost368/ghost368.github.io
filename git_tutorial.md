@@ -138,7 +138,9 @@ need to resolve the conflict and run git add, git commit
 ```
 git merge -X <ours|theirs> <branch-name>
 ```
-use ours to stay with HEAD and theirs to stay with the other branch version
+use ours to stay with HEAD and theirs to stay with the other branch version;
+
+* otherwise, if we want to manually adjust the current branch, make the changes in the current branch (or local version if merge during pull), use ```git add . ``` to add corrected conflict files; then run ```git commit``` - vim will open to enter the merge commit message; after that the conflict is resolved
 
 
 
