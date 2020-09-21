@@ -162,6 +162,7 @@ export PYTHONPATH="$PYTHONPATH:$(pwd)"
 
 
 *```rm /path/to/dir/*``` to remove everything inside a directory (```rm ./*``` for the current dir)
+* try removing file (do nothing if exists) ```rm -f /path/to/file```
 
 
 * ~/.bashrc is a script that is run whenever bash is started. So e.g. to always have some path in the PATH variable can append

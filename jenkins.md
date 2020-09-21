@@ -32,3 +32,17 @@ sudo ufw status
 
 * to access remotely on virtual machine add tunnel 8080 to 8080 
 (for this need to use Host Only adapter and real IP address if VM is on virtual box)
+
+
+* jenkins will create its own user (called jenkins) and Jenkinsfile will run script from this user's side; 
+so this like conda, poetry, etc won't be installed or visible from there. May be useful to automatically run those commands under another user, for this
+go to /etc/sysconfig/jenkins on RHEL or /etc/default on Debian change the JENKINS_USER to whatever you want. 
+(user maybe given in a variable with value 'jenkins' - change just user, not the variable)
+```$JENKINS_USER="vlad"```
+
+Then change the ownership of the Jenkins home, Jenkins webroot and logs.
+chown -R vlad:vlad /var/lib/jenkins 
+chown -R vlad:vlad /var/cache/jenkins
+chown -R vlad:vlad /var/log/jenkins
+
+(in production enterprise environment this will probably be already set up in a more proper way)
