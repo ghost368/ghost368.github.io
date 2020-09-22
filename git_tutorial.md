@@ -274,11 +274,13 @@ git push origin master dev # Updates remote’s mater and dev branches
 git push origin --tags # Sends tags to remotes
 ```
 
-* before running ```pull``` for the first time run 
+* before running ```pull``` or ```push``` for the first time run 
 
 ```
 git branch --set-upstream-to=origin/<branch> master
 ```
+(can using -u as short form, typically ```git push -u origin master);
+the idea to create a new branch on remote if not create, which will be the upstream to the given local branch (most often the same branch name)
 
 * ```git push remote_name --delete branch_name``` delete remove branch (remote_name is usually origin)
 

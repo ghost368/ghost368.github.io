@@ -46,3 +46,12 @@ chown -R vlad:vlad /var/cache/jenkins
 chown -R vlad:vlad /var/log/jenkins
 
 (in production enterprise environment this will probably be already set up in a more proper way)
+
+
+---------------
+
+* MORE :
+	- what plugins to install (Git, Git source)
+	- adding Github hook, what about bitbucket?
+	- creating hook requires a Jenkins url that github can use (might use ngrok for that)
+	but probably manual deploy is fine
