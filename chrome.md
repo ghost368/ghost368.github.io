@@ -32,6 +32,7 @@ turn on "Clear cookies and site data when you quit Chrome"
 * when I connect to Google account, it automatically uploads all my installed extensions, 
 as well as settings (delete cookies when I quit, etc)
 
+
 # Shortcuts
 
 | Shortcut | Action |
@@ -44,3 +45,5 @@ as well as settings (delete cookies when I quit, etc)
 | Ctrl + Shift + I | inspect page|
 | Ctrl + PgUp/PgDn| switch tabs (more handy than Ctrl + Tab)|
 | Ctrl + Home/End | go to top/bottom of the page |
+
+

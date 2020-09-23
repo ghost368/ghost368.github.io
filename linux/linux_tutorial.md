@@ -205,3 +205,6 @@ to the .bashrc file
 
 
 * running a command async : ```$ myscript &``` (putting & at the end)
+
+
+* some the keyboard layout may be slightly wrong (e.g. " swaped with @ etc) - this is likely due to the difference of English (UK) and English (US) - try both layouts (in Ubuntu can add in system settings -> language and region etc) and leave the one that is correct
