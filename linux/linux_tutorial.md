@@ -107,6 +107,8 @@ mkdir -p path/to/dir
 
 * can do smth like ``` cd /home/*/*/dir``` i.e. skip dir names, will work well if the result is uniquely defined
 
+* ```cd -``` cd to the previous location (e.g. cd somewhere and then want to go back)
+
 
 * find files
 
@@ -203,3 +205,6 @@ to the .bashrc file
 
 
 * running a command async : ```$ myscript &``` (putting & at the end)
+
+
+* some the keyboard layout may be slightly wrong (e.g. " swaped with @ etc) - this is likely due to the difference of English (UK) and English (US) - try both layouts (in Ubuntu can add in system settings -> language and region etc) and leave the one that is correct
