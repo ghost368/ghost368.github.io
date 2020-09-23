@@ -45,4 +45,5 @@ tmux list-sessions
 ```
 (when making change to ~/.tmux.conf may need to close all sessions before they will take effect)
 
-* add ```PS1="$PS1\n"``` to ~/.bashrc : this will start each bash command on new line (useful then having long env paths, almost no place for the command itself in the line)
+* to start each bash command on new line (useful then having long env paths, almost no place for the command itself in the line)
+go to ~/.bashrc and find PS1 variable - can adjust it to anything (e.g. I added \n after :, to get ~$ on the next line)
