@@ -70,3 +70,16 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 * create ssh tunnel (typically port will be 8888 or 8889)
 * from ssh terminal run ```jupyter notebook --no-browser```
 * this will create a link that can be accessed from the client (and will open client's browser)
+
+
+
+----------------------------------
+
+* jupyter supports autocompletion using tab (similar to plain ipython), but won't show option list automatically
+
+
+## Jupyter Lab
+
+* extensions
+	- ```jupyter labextension install @axlair/jupyterlab_vim``` vim (modification to work with jupyterlab 2.0.x)
+	- ```jupyter labextension install jupyterlab-plotly``` using plotly 

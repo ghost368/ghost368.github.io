@@ -15,6 +15,8 @@ export PATH=$PATH:~/miniconda3/bin
 conda init bash
 ```
 
+* ```conda install nb_conda_kernels``` to make all conda envs appear in jupyter (very useful)
+
 (might need to reopen terminal in between the commands)
 
 

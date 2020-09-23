@@ -32,6 +32,11 @@ turn on "Clear cookies and site data when you quit Chrome"
 * when I connect to Google account, it automatically uploads all my installed extensions, 
 as well as settings (delete cookies when I quit, etc)
 
+* run URL in app mode (e.g. useful for jupyter lab):
+``` /path/to/chrome --app=<my_url> ```
+(in windows use path to chrome.exe)
+
+
 # Shortcuts
 
 | Shortcut | Action |
