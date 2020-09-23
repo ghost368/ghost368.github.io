@@ -102,6 +102,9 @@ mkdir -p path/to/dir
 
 * ```cp -R from to``` : here -R means recursive copy (copy all nested dirs)
 
+* ```cp /home/usr/dir/{file1,file2,file3,file4} /home/usr/destination/``` copy multiple files to another destination (filename coma-separated without spaces!)
+
+
 * can do smth like ``` cd /home/*/*/dir``` i.e. skip dir names, will work well if the result is uniquely defined
 
 * ```cd -``` cd to the previous location (e.g. cd somewhere and then want to go back)
@@ -199,3 +202,6 @@ to the .bashrc file
 
 
 * ```rm -rf /path/to/dir?``` remove dir if exists otherwise do nothing
+
+
+* running a command async : ```$ myscript &``` (putting & at the end)
