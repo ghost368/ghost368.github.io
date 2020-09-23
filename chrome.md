@@ -45,4 +45,7 @@ as well as settings (delete cookies when I quit, etc)
 | Ctrl + PgUp/PgDn| switch tabs (more handy than Ctrl + Tab)|
 | Ctrl + Home/End | go to top/bottom of the page |
 
+* run URL in app mode (e.g. useful for jupyter lab):
+``` /path/to/chrome --app=<my_url> ```
+(in windows use path to chrome.exe)
 
