@@ -104,6 +104,8 @@ mkdir -p path/to/dir
 
 * can do smth like ``` cd /home/*/*/dir``` i.e. skip dir names, will work well if the result is uniquely defined
 
+* ```cd -``` cd to the previous location (e.g. cd somewhere and then want to go back)
+
 
 * find files
 
