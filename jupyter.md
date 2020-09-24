@@ -164,6 +164,14 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 }
 ```
 
+* jupyterlab-vim 
+	- allows vim keybindings on cell level and also additional vim-like shortcuts on the cell level
+	- check https://github.com/jwkvam/jupyterlab-vim for list of keybindings
+	- cannot have key map config; the only one I need is jk instead of Esc: in normal mode inside cell do ```: imap jk <Esc>``` at the start of each session
+	- use :q to go from vim cell to vim jupyter mode, Enter to go vim-cell mode for the selected cell
+
+
+
 
 
 * close tab is Alt+w in jupyter lab (not Ctrl+W which closes the whole thing - inherited from chrome)

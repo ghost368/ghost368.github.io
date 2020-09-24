@@ -16,9 +16,10 @@ to procrastinate
 
 * auto accept-cookies
 
-* Open Tabs Next to Current extension:
+* Open New Tab After Current Tab extension:
   Ctrl+T will open the new table next to current one
-  Ctrl+Shift+Y to open a new table at the end
+  (there are several such extensions, choose one that does not introduce new shortcuts, so that e.g. Ctrl+Y is not used, 
+  this is useful when working with jupyterlab)
 
 * Hide download bar extension
 then use Ctrl+Shift+H to hide it
