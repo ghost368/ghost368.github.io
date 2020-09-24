@@ -208,3 +208,5 @@ to the .bashrc file
 
 
 * some the keyboard layout may be slightly wrong (e.g. " swaped with @ etc) - this is likely due to the difference of English (UK) and English (US) - try both layouts (in Ubuntu can add in system settings -> language and region etc) and leave the one that is correct
+
+* ```git diff /path/to/file1 /path/to/file2``` can be used to get git-like colorful output of the difference between two files, even if that is outside any git repository (!!)
