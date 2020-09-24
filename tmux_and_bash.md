@@ -6,6 +6,7 @@
 	- [ to start scroll mode, the use up/down, pgUp/pgDown to scroll through history, 
 	q to exit scroll mode
 	- exit to close a terminal
+	- exit pand : Ctrl+d
 
 * more tmux shortcuts:
 https://tmuxcheatsheet.com/
@@ -26,7 +27,7 @@ bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xc
 ```
 explanation:
 	- make bash prompts colorful and in usual bash
-	- make mouse working - can use to scroll history (q to exit scroll mode, of scroll down), change pane sizes, select
+	- make mouse working - can use to scroll history (q to exit scroll mode, of scroll down), change pane sizes, select text, move focus to another pane
 	- set vim commands to use with history (scroll mode active with scroll or ```Ctrl+B [``` then can use vim to find and select smth in the bash pane history)
 	- last 2 commands make possible mouse copying to clipboard from tmux : select smth with mouse, release mouse click will automatically copy to clipboard
 	(in vim might need to get rid of line numbers before selection, do ```:set nonumber```)

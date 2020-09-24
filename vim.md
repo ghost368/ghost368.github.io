@@ -190,6 +190,18 @@ nnoremap <F10> :IPythonCellExecuteCellJump<CR>
 
 
 
+* shortcuts for NERDTree
+```
+let map_leader = ","
+nmap <leader>ne :NERDTreeToggle<cr>
+nmap <leader>nem :NERDTreeMirror<cr>
+```
+
+* splitting editor window:
+	- :sp to split horizontally
+	- : vsp to split vertically
+	- close each split as usual
+	- Ctrl+w then h j k l to move between panes
 
 
 

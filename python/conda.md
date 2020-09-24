@@ -19,6 +19,7 @@ conda init bash
 
 (might need to reopen terminal in between the commands)
 
+* ```conda info --envs``` to show the list of all conda envs
 
 * can create conda environment 
 	- manually

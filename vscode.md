@@ -15,6 +15,7 @@
 * Install Python extension
  
 * Ctrl+Shift+P -> Settings -> Font size -> make 15
+* to settings.json add ```"terminal.integrated.fontSize": 15,``` to adjust terminal font siz
  
 * Open project -> Select Interpreter
  be sure jupyter is installed in the environment
@@ -31,6 +32,9 @@
     - Follow black installation tip
     - in user settings look for 'format on save' and check the box (now Format will apply at each saving)
     - in user settings search for Black Args and add ```--skip-string-normalization``` (to avoid using " ")
+    - create a separate conda environment (called e.g. vscode, to hold similar packages for vscode there) and install black (use conda-forge) there;
+    in settings type `black path`, and the specify the /path/to/env/bin/black there 
+    (like we'll avoid the need to install black in every environment used)
     
 
 * Install extensions:
@@ -78,11 +82,12 @@
    to switch between vim and normal mode
    
 
- * Add to settings.json
+ * Add to settings.json (to preserve shortcuts for find, replace and close tab while in vim mode)
  ```
  "vim.handleKeys": {
         "<C-f>": false,
         "<C-h>": false
+        "<C-w>": false
     }
   ```
   (in general add any keys that I wan't to preserve from vscode in vim mode)
@@ -97,7 +102,10 @@
 
 * Go to keyboard shortcuts, add Shift+Alt+D shortcut for Debug Current Cell
 
-* Set Ctrl+Alt+Shift+0 shortcut to clear all python cell output
+
+* Set Ctrl+Alt+Shift+0 shortcut to delete all python cells 
+
+
 * can use %reset magic to restart window
 
 
@@ -111,7 +119,7 @@
 
   ```
   {
-          "key": "alt+enter",
+          "key": "alt+enter" while in vim mode,
           "command": "python.execSelectionInTerminal",
           "when": "editorTextFocus && !findInputFocussed &&  !replaceInputFocussed && editorLangId == 'python'"
   }
@@ -152,10 +160,18 @@
   - Ctrl+Shift+Alt+0 : clear PIW output
   - Ctrl+Shift+Alt+C : collapse all input cells
   - Ctrl+Shift+Alt+V : expand all input cells     
+  (may not work if focus in not on interactive console)
+
+
+* add startup commands for interactive window : in settings look for run startup commands for data science;
+add as a single string (disregard json warning)
+```%load_ext autoreload\n%autoreload 2"``` for autoreload; can add other commands in the same string separated by \n
+
 
 * set Refresh Explorer to Ctrl+Shift+Alt+N
 
 * Change Open debug console shortcut to Ctrl+; (to be similar to terminal Ctrl+')
+* Open problems view : set to Ctrl+Shift+'
 
 * Change Ctrl+1/2/3 to Alt+1/2/3 (Alt+nb is for tabs inside the same window -- not very useful, first 3 nbs is enough, can change all to 9 of course)
 
@@ -292,13 +308,71 @@ use Shift+F5 to stop
 |Ctrl+Shift+G| Open git explorer|
 |Ctrl+Shift+T| Open keyboard shortcuts|
 |Ctrl+Shift+ slash| Split editor window vertically|
-|Ctrl+Alt+ left/right| Moving files between views in split mode|
 |Ctrl =/-| increase/descrease font in editor and consoles|
 |Ctrl+F4| Close application tab (like settings, keybindings etc)|
 
+
+* Ctrl+Alt+ left/right - Moving files between views in split mode (on Windows) - this will not work on Ubuntu
+thus better to remap to Ctrl+Shift+left/right (look in keyboard shortcuts -> move editor to next/previous)
+
 --------------------------------------------------
 
-**big problem: how to make python refactoring : works ok inside a function, but not for global varialbles**
+###  Intellisense, pylance, jedi, pylint, refactoring
+
+* Python extension comes with python intellisense which enables code autocomplete
+* in settings choose tab completion to be On, use tab to go through the list of best completion options
+
+* add this to settings.json to exclude .git folder from watch (may be other project hidden and cache folders)
+```
+"files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  }
+```
+this will exclude those folders (can add other) from watch
+  - normally this should imply that language engine won't look up in those folders (e.g. to view function usage or rename), 
+  though this may be broken at times
+  - if any of the refactoring/intellisense/linter feature does not work or work slowly or show errors, this may be related to 
+  hidden folders inside the project dir (like .git or .env) - remove them from dir and check again
+
+
+* intellisense requires python language engine
+  - old version : microsoft python language engine (will be deprecated)
+  - new vscode version : pylance (recommended to install extension and use)
+  - another option is **Jedi** (search Jedi or laguage engine in options to switch engines)
+
+* more about Jedi:
+  - jedi is a standalone refactoring and autocomplete tool for python
+  - however in VSCode it needs other things to run correctly:
+    * e.g. it need rope for refactoring (if Jedi is selected as language engine, vscode will prompt to 
+    install rope in the current env dev tools)
+    * there no highlighting or linting (would need Magic python extension for highlighting and pylint for linting)
+
+**so it is recommended to use Pylance in VSCode rather than Jedi, and do not add rope, pylint, MaginPython etc**
+
+* more on rope
+  - rope is the only available tool for python refactoring outside IDE (e.g. in vim)
+  - ropevim for vim is a good way to go if e.g. renaming using vim is needed
+  - however the library does not look reliable since it does not even fully support python 3 and looks like it's
+  not actively developed/used anymore
+  - overall try to avoid depending on it too much (ok to use occasionally in vim via ropevim till it still works)
+
+* linting: needed only if no Pylance (Pylance already has static analysis tools)
+  - add to settings.json
+  ```
+  "python.linting.pylintEnabled": true
+  ```
+  - need pylint in the current env
+  - normally linting will be automatic or on save
+  - add MaginPython extension for syntax highlighting
+
+
+* VSCode Pylance shortcuts
+|F2| Rename|
+|Shift+F12| Go to usages|
+|Alt+Shift+F12| Find usages|
+|hold Alt+Shift, F8| Go through found problems/errors|
 
 
 

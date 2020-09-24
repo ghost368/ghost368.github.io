@@ -79,6 +79,22 @@ Full information on python-poetry.org
 
 
 * when removing a package or changing version need to put ```--dev``` option if the package is in dev-dependencies
+
+
+
+
+* standard dev dependencies
+```
+jupyter = "^1.0.0"
+pytest = "^6.0.1"
+black = {version = "^19.10b0", allow-prereleases = true}
+jedi = "^0.17.2"
+ipdb = "^0.13.3"
+rope = "^0.17.0"
+pylint = "^2.6.0"
+```
+
+
 --------
 
 ## Questions:

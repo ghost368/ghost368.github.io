@@ -75,11 +75,97 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 
 ----------------------------------
 
+
+
+## Creating environment and project with jupyter notebooks, JupyterLab
+
+* jupyter notebooks typically won't directly be used for production, but useful to make reports or store some tests
+* jupyter notebooks maybe
+	- python library guides
+	- data exploration
+	- signal backtests and reports
+
+* to use jupyter lab:
+	* create venv or conda env (e.g. called jupyter);
+	it must contain only jupyter, jupyter lab etc
+
+	* I will them specify env (i.e. kernel) for each jupyter notebook separately anyway, those kernels are absolutely not
+	related to the env (kernel) which run the jupyterlab
+	**(would be useful to have a big research env with all necessary packages, including local if they're compatible, to easily do research on everything -- but this env should be different from the env which runs the jupyterlab)**
+
+	* extensions (to add to the jupyter environment)
+		- install nodejs via conda (not pypi) ```conda install -c conda-forge nodejs```
+		- ```jupyter labextension install @axlair/jupyterlab_vim``` vim (modification to work with jupyterlab 2.0.x)
+		- ```jupyter labextension install jupyterlab-plotly``` using plotly 
+		- install pypath_magic via pip or poetry add, used to easily add smth to pythonpath inside notebook
+
+	* to run jupyterlab : 
+		- go to any folder, activate jupyter env
+		- run ```jupyter lab --no-browser```
+		- copy the link, then run it with ```google-chrome --app=<link_url>```
+		(chrome.exe path in Windows)
+		- this will run jupyterlab, and by default the cwd of the kernels will be the dir where I ran 
+		jupyter lab
+		-typically I will either use an env of some project (to make research on the functions in that project), or a big research env, which will contain a lot of projects (e.g. installed via poetry using tar.gz and path or git-url and tag), the problem here mightly the different projects envs compatibility; 
+		or a specifically created env for a particular research in a notebook
+		- it's quite convenient to store all notebooks in one place since I'll access them all mostly through jupyter lab, and thus I can have the common folder simply open in jupyter lab, and check notebooks that're needed
+		(though some notebooks with descriptive tests for a particular package may be stored directly in that package - will be supposed that notebook runs well in the package env specified in pyproject.toml)
+
+	* dependencies
+		- one option for a notebook is to run in a specific env (e.g. large research env) that have everything needed installed, including local packages (e.g. via poetry path or git installation);
+		in this case we don't care about the cwd
+		- it may be the case that notebooks goes together with a package and we suppose that it runs from the package env and from the package main dir;
+		so basically the notebook is a set of valid commands (tests) that run well if I go to the package, activate env and run them 
+		(and I'm not suppose to run them in a separate env with the package installed, just like tests inside the package used for pytest);
+		- for this second option the best is to add current local folder with the package to path
+		- use pypath magic : run %pypath -a /path/to/package
+		- this approach is good because I can make changes in the package and the notebook at the same time (even more useful with autoreload)
+		- also maybe used if during development I modify the package and the notebook at the same time, but later can create an env with the package properly installed to run the notebook in
+
+
+
+
+
+### jupyterlab setup
+
+* add this to keyboard shortcut settings
+```
+{"shortcuts": [
+    {
+        "command": "application:toggle-left-area",
+        "keys": [
+            "Accel B"
+        ],
+        "selector": "body",
+        "disabled": true
+    },
+    {
+        "command": "application:toggle-left-area",
+        "keys": [
+            "Accel X"
+        ],
+        "selector": "body"
+    },
+    {
+            "command": "application:activate-next-tab",
+            "keys": [
+                "Ctrl PageDown"
+            ],
+            "selector": "body"
+        },
+    {
+            "command": "application:activate-previous-tab",
+            "keys": [
+                "Ctrl PageUp"
+            ],
+            "selector": "body"
+        }
+    ]
+}
+```
+
+
+
+* close tab is Alt+w in jupyter lab (not Ctrl+W which closes the whole thing - inherited from chrome)
 * jupyter supports autocompletion using tab (similar to plain ipython), but won't show option list automatically
 
-
-## Jupyter Lab
-
-* extensions
-	- ```jupyter labextension install @axlair/jupyterlab_vim``` vim (modification to work with jupyterlab 2.0.x)
-	- ```jupyter labextension install jupyterlab-plotly``` using plotly 
