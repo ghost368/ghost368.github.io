@@ -119,3 +119,6 @@ print(args.accumulate(args.integers))
 * check if None: just use ```if var``` instead of ```if var is None```
 
 * in python>=3.7 standard dicts retain order?? (don't need OrderedDict anymore?)
+
+* got get python command execution time in linux: 
+```time python script.py```

@@ -49,6 +49,7 @@
 |zt, zb, zz| move current line to the top, bottom and center of the screen|
 |daw caw| delete the word around the cursor (and switch to insert for caw)|
 |<line number>G| jump to a specific line number (e.g. 32G)|
+|Shift zz| save and quit, like :wq|
 
 * can combine commands and use e.g. vf, vt, vF, cF, cf, ct, dt, yF etc 
 
@@ -94,6 +95,18 @@ through that list
 (in MobaXterm I setup for the paste be Shift+Space)
 
 
+* add leader specification to , in .vimrc
+```
+let mapleader = ","
+let g:mapleader = ","
+```
+(can use <leader> in the mappings)
+
+* key mapping:
+	- :map is a usulal map, :noremap is a nonrecursive map
+	- further need to specify mode in which to remap (i, n or v for insert, normal and visual)
+	- hence get nnoremap, imap, vmap, vnoremap etc
+
 ### Terminal vim configuration
 
 * add to ~/.vimrc 
@@ -105,6 +118,14 @@ set wildmode=longest,list,full
 set wildmenu
 ```
 (map esc to jk, show line numbers in files, activate tab autocomplete)
+
+
+* d and c in vim will actually cut the text (delete and add to buffer), 
+to delete completely the black hole buffer is used ("_d, "_c), map it to simplfy (add to ~/.vimrc)
+```
+nnoremap <leader>d "_d
+nnoremap <leader>c "_c
+```
 
 
 
@@ -160,6 +181,7 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	* vim-ipython-cell
 
 
+* can open folder with vim, in this case the tree will open
 
 * add the following to .vimrc (slime and ipython-cell configuration)
 ```
@@ -241,5 +263,29 @@ nmap <leader>nem :NERDTreeMirror<cr>
          "before": ["j", "k"],
          "after": ["<esc>"]
      }
-]
+], 
+"vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ",",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                ",",
+                "c"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "c"
+            ]
+        }
+    ],
 ```

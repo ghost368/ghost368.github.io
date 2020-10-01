@@ -94,6 +94,13 @@ rope = "^0.17.0"
 pylint = "^2.6.0"
 ```
 
+* poetry version command (get or adjust version)
+	- no argument : get the current version
+	- major	1.3.0 -> 2.0.0
+	- minor	2.1.4 -> 2.2.0
+	- patch	4.1.1 -> 4.1.2
+	- specify exact new version number
+
 
 --------
 
