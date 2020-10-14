@@ -376,4 +376,4 @@ this will exclude those folders (can add other) from watch
 
 
 
-
+* can open files from terminal in VSCode by ```code filepath``` (will open it in the current window if any)

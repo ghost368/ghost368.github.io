@@ -98,6 +98,7 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 		- ```jupyter labextension install @axlair/jupyterlab_vim``` vim (modification to work with jupyterlab 2.0.x)
 		- ```jupyter labextension install jupyterlab-plotly``` using plotly 
 		- install pypath_magic via pip or poetry add, used to easily add smth to pythonpath inside notebook
+		(pypath_magic has to be added as --dev dependency to all envs with which I want to use it)
 
 	* to run jupyterlab : 
 		- go to any folder, activate jupyter env
