@@ -101,4 +101,6 @@ the use .sel and slice(start, end) to select data w.r.t. the date
 - first run the full procedure (example productionizing) for a piece of code, make all run, then will be easy to generalize on the rest
 
 
+-----------
 
+* The most Pythonic idiom is to clearly document what the function expects and then just try to use whatever gets passed to your function and either let exceptions propagate or just catch attribute errors and raise a TypeError instead. Type-checking should be avoided as much as possible as it goes against duck-typing. Value testing can be OK – depending on the context.
