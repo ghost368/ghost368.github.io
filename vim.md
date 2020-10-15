@@ -53,6 +53,7 @@
 
 * can combine commands and use e.g. vf, vt, vF, cF, cf, ct, dt, yF etc 
 
+* ```:noh``` to remove highlighting from the seach 
 
 * select to the next search result : v/text+enter - then use n/N to adjust selection; 
 the same will work with c, d, y etc 

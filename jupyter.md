@@ -97,7 +97,7 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 		- install nodejs via conda (not pypi) ```conda install -c conda-forge nodejs```
 		- ```jupyter labextension install @axlair/jupyterlab_vim``` vim (modification to work with jupyterlab 2.0.x)
 		- ```jupyter labextension install jupyterlab-plotly``` using plotly 
-		- install pypath_magic via pip or poetry add, used to easily add smth to pythonpath inside notebook
+		- install pypath_magic via pip or poetry add (```pip install pypath_magic```), used to easily add smth to pythonpath inside notebook
 		(pypath_magic has to be added as --dev dependency to all envs with which I want to use it)
 
 	* to run jupyterlab : 
@@ -119,7 +119,11 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 		so basically the notebook is a set of valid commands (tests) that run well if I go to the package, activate env and run them 
 		(and I'm not suppose to run them in a separate env with the package installed, just like tests inside the package used for pytest);
 		- for this second option the best is to add current local folder with the package to path
-		- use pypath magic : run %pypath -a /path/to/package
+		- use pypath magic : run 
+		```
+		%load_ext pypath_magic
+		%pypath -a /path/to/package
+		```
 		- this approach is good because I can make changes in the package and the notebook at the same time (even more useful with autoreload)
 		- also maybe used if during development I modify the package and the notebook at the same time, but later can create an env with the package properly installed to run the notebook in
 

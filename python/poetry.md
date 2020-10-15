@@ -39,6 +39,8 @@ pip install -e path/to/SomeProject
 ```
 (essentially used to develop two related projects at the same time)
 
+* to temporarily use local version of package (e.g. for simultaneous development) add the package build (some recent version of it) via path option to pyproject.toml to install it with dependencies, that use ```pip uninstall package_name``` (this will not uninstall dependencies) and simply add the repo with package to python path in the notebook, together with autoreload this will pull up all the changes every time, and build and install new package version later when dev is done.
+
 
 * python package egg-info - distribution format for python packages, 
 
