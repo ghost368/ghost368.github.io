@@ -271,4 +271,6 @@ replace with class containing df, and methods .f1(x, y), .f2(a)
 
 
 
+-----------
 
+* The most Pythonic idiom is to clearly document what the function expects and then just try to use whatever gets passed to your function and either let exceptions propagate or just catch attribute errors and raise a TypeError instead. Type-checking should be avoided as much as possible as it goes against duck-typing. Value testing can be OK – depending on the context.
