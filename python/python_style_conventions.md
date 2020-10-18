@@ -54,6 +54,19 @@ later even if config format changes, I only need to change the config API class
 * recommended to divide big package into sub packages (subfolders with __init__.py file each)
 
 
+## Function arguments conventions
+
+* it's a good practice to have None as default values, and then process this case inside the function like
+```
+def f(x, y=None):
+	if y is None:
+		y = DEFAULT_Y
+	...
+```
+
+* make docstrings shorter : do not repeat what's very clear from the signature itself - complete types (can be stated using typing lib in the signature), default values.
+
+* write docstrings and type hints mostly at the end because the signatures and variable names may frequently change during development
 
 
 

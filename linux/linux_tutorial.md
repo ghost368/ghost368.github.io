@@ -203,6 +203,8 @@ to the .bashrc file
 
 * ```rm -rf /path/to/dir?``` remove dir if exists otherwise do nothing
 
+* remove files older than X days (X=5 here) ```find /path/to/files* -mtime +5 -exec rm {} \;```
+
 
 * running a command async : ```$ myscript &``` (putting & at the end)
 
