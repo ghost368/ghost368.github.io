@@ -174,6 +174,7 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 	- check https://github.com/jwkvam/jupyterlab-vim for list of keybindings
 	- cannot have key map config; the only one I need is jk instead of Esc: in normal mode inside cell do ```: imap jk <Esc>``` at the start of each session
 	- use :q to go from vim cell to vim jupyter mode, Enter to go vim-cell mode for the selected cell
+	- simplify going to jupyter mode (:q) can use ```: imap qq :q<cr>``` (press qq from insert mode, in jupytervim not really possible to map anything in normal mode)
 
 
 
