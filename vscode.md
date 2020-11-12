@@ -154,8 +154,8 @@
 
 * Create new file: Ctrl+N -> Ctrl+S -> specify the path and the file name
 
-* set Python interactive window keybindings
-  - Ctrl+Shift+Alt+P : start PIW
+* set Python interactive window keybindings (now in the Jupyter category, not python.datascience)
+  - Ctrl+Shift+Alt+P : start PIW 
   - Shift+Alt+R : restart PIW
   - Ctrl+Shift+Alt+0 : clear PIW output
   - Ctrl+Shift+Alt+C : collapse all input cells
