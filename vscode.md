@@ -164,6 +164,10 @@
   (may not work if focus in not on interactive console)
 
 
+* set Ctrl+Shift+Alt+Enter to run current script in the terminal 
+(unlike interactive window it's equivalent to running it from command line using python command, not
+copying it to ipython console)
+
 * add startup commands for interactive window : in settings look for run startup commands for data science;
 add as a single string (disregard json warning)
 ```%load_ext autoreload\n%autoreload 2"``` for autoreload; can add other commands in the same string separated by \n
