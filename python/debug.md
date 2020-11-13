@@ -11,6 +11,7 @@
 |Ctrl+Shift+F10| disconnect debugger|
 |F5| continue until breakpoint or end|
 |Alt+Shift+F10| run until cursor (if in vim -- should be in insert mode)|
+|F9| set breakpoint|
 
 * debug of script or module
 	- run F5
@@ -35,7 +36,7 @@
 |n or next| step over|
 |s or step| step into|
 |c or continue| continue until breakpoint or end|
-|j line_nb| jump to line number in the current file|
+|j line_nb| jump to line number in the current file (without running code in-between)|
 |b file_path: line_nb| create breakpoint in any file|
 |r| move to the current function return (useful since there's no step out in pdb)|
 |q| quit debugger|
@@ -63,7 +64,7 @@ can debug a module in python 3.7+ using
 python -m pdb -m module
 ```
 
-* either of this commands with open pdf debugger at the start of the script
+* either of this commands with open pdb debugger at the start of the script
 	
 ----------------------------------
 
@@ -76,7 +77,7 @@ python -m pdb -m module
 ------------------------------
 
 * remote debug if error in production files:
-	* when debugging using ipdb remotely from terminal and w/o vscode -- useful to use tmax to 
+	* when debugging using ipdb remotely from terminal and w/o vscode -- useful to use tmux to 
 	open code files in vim in one window and pdb debug in the other
 	* can use post-mortem for terminal commands with ```-m pdb``` if that's enough (run and press continue)
 	* or go to ipython -> run command that breaks -> use pdb post-mortem with %debug to check variables
