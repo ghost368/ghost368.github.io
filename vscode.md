@@ -206,6 +206,7 @@ use Shift+F5 to stop
   - write markdown code in comments, such as ```# * first item```
 
 
+* in settings set Enable cell code lens to False (to remove cell hints)
 
 
 * install regreplace extension 
@@ -295,6 +296,9 @@ use Shift+F5 to stop
 
 
 * in settings Open folder in a new window -> switch to on (will open another folder without closing the current one)
+
+
+* Ctrl+Enter to open file from the side bar in a new split-screen section
 
 ---------------------------------------------------
 

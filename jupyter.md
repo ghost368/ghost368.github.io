@@ -183,3 +183,4 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 * close tab is Alt+w in jupyter lab (not Ctrl+W which closes the whole thing - inherited from chrome)
 * jupyter supports autocompletion using tab (similar to plain ipython), but won't show option list automatically
 
+* use %prun magic to profile a cell run
