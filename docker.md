@@ -2,7 +2,8 @@
 * install docker
 ```sudo apt-get update```
 remove old versions
-sudo systemctl enable docker	```
+```
+sudo systemctl enable docker
 sudo apt-get remove docker docker-engine docker.io
 ```
 run 
