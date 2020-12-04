@@ -212,3 +212,22 @@ to the .bashrc file
 * some the keyboard layout may be slightly wrong (e.g. " swaped with @ etc) - this is likely due to the difference of English (UK) and English (US) - try both layouts (in Ubuntu can add in system settings -> language and region etc) and leave the one that is correct
 
 * ```git diff /path/to/file1 /path/to/file2``` can be used to get git-like colorful output of the difference between two files, even if that is outside any git repository (!!)
+
+
+* Linux terminal commands
+
+| Command | Action |
+| -------- | ----------- |
+|ls | see current wd contents|
+|ls -a | see current wd contents including hidden files|
+| ls -1| output in column |
+| ls -la| output contents with details |
+| command \| vim - | open output of any command in vim |
+| ln -s /path/to/folder shortname | create soft link to a folder|
+| readlink -f linkname | get soft link target |
+|cp -r /dir1 /dir2  | copy folders|
+| rm -rf /folder/to/remove| remove folder with its contents|
+| mv oldname newname | move or rename folder |
+| pwd| get current working directory|
+| nautilus --new-window| open GUI file manager (useful for ssh connections)|
+| Ctrl+R| autocomplete from recent command history|
