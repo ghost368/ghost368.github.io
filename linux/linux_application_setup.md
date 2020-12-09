@@ -71,3 +71,9 @@
 	```
 
 	(works reasonably well with X11 forwarding)
+
+
+* Modern CSV
+	- download free version of Modern CSV 
+	- follow the instuction for adding application from linux tutorial
+	- open settings file, add light them, and freezing first header row
