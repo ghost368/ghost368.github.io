@@ -35,6 +35,14 @@
     - create a separate conda environment (called e.g. vscode, to hold similar packages for vscode there) and install black (use conda-forge) there;
     in settings type `black path`, and the specify the /path/to/env/bin/black there 
     (like we'll avoid the need to install black in every environment used)
+
+
+* go to specilised conda environment for editor utils (called e.g. vscode, same where we install black)
+    - install mypy there via pip
+    - in VSCode settings check the flag for python->linting->mypy enabled
+    - add ```--ignore-missing-imports``` to mypy args in the settings
+    - in command palette can turn linting on and off
+
     
 
 * Install extensions:
