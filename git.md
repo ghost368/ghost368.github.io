@@ -162,6 +162,11 @@ git tag -a v0.1 -m ’v0.1 stable release, changes from...’
 git tag -d <tag-name>
 ```
 
+* get tag pointing on current commit
+```
+git tag --points-at HEAD
+```
+
 ## git checkout
 
 * can be used with branch, with path or both, or a commit
