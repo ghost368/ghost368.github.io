@@ -167,6 +167,11 @@ git tag -d <tag-name>
 git tag --points-at HEAD
 ```
 
+* checkout tag (go to detached HEAD state, similar to commit checkout; branch name is optional)
+```
+git checkout tags/tag_name -b branch_name
+```
+
 ## git checkout
 
 * can be used with branch, with path or both, or a commit
