@@ -332,6 +332,10 @@ of other users that made this commit in broken state (!)
 
 so it's very bad even if the lost commit were useless.
 
+* remove remote upstream (e.g. name origin)
+``` git remote remove origin ```
+
+
 * deleting commit
 
 ```
