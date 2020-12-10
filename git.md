@@ -221,6 +221,10 @@ HEAD is the default commit)
   * can also specify file(s) to reset, need to specify HEAD explicitly, e.g.
   ```git reset HEAD file_name``` (default is --mixed mode) will unstage a particular file (move from staging index to just working dir changes)
 
+  * to completely overwrite local branch with remote brach use (from the branch you're overwriting)
+  ```
+  git reset --hard origin/branch_name
+  ```
 
 ## git clean
 
