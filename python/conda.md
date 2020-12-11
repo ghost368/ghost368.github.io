@@ -42,6 +42,11 @@ use ```conda env create --file environment.yml``` to create conda env from it,
 then ```source activate playenv``` to activate 
 
 
+* to list all conda environments
+```
+conda env list
+```
+
 * create manually, e.g.
 
 ```

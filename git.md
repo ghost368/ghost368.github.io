@@ -142,6 +142,23 @@ use ours to stay with HEAD and theirs to stay with the other branch version;
 
 * otherwise, if we want to manually adjust the current branch, make the changes in the current branch (or local version if merge during pull), use ```git add . ``` to add corrected conflict files; then run ```git commit``` - vim will open to enter the merge commit message; after that the conflict is resolved
 
+* if we started a merge and got a conflict, we can return to the previous correct state before the merge using
+```
+git merge --abort
+```
+
+
+* rebase to remote branch (if some commits were done to remote branch, I also did some commits, now I want to make my local 
+version if like I pull the current remote branch first and than added my commits)
+```
+git fetch origin            # Updates origin/master
+git rebase origin/master    # Rebases current branch onto origin/master
+```
+or even simpler
+```
+git pull --rebase origin master
+```
+(master branch taken as an example)
 
 
 
