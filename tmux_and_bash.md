@@ -49,3 +49,5 @@ tmux list-sessions
 
 * to start each bash command on new line (useful then having long env paths, almost no place for the command itself in the line)
 go to ~/.bashrc and find PS1 variable - can adjust it to anything (e.g. I added \n after :, to get ~$ on the next line)
+
+* can setup colors, text style and output for PS1 (strings shown at the start of each command) in ```~/.bashrc```
