@@ -11,6 +11,7 @@
 * more tmux shortcuts:
 https://tmuxcheatsheet.com/
 
+* install ```xclip```
 
 * tmux config : add the following to ~/.tmux.conf
 ```
