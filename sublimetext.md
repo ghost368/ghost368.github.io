@@ -69,6 +69,7 @@ press Ctrl+Alt+Shift+t to open powershell in the current project folder (if e.g.
 
 * Ctrl+P : go to anything (including the currently open files)
 
+* Install ActualVim package
 
 * To use vim inside sublime 
 	- remove Vintage and/or ActualVim from ignored packages in settings json file
