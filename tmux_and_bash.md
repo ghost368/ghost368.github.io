@@ -11,7 +11,7 @@
 * more tmux shortcuts:
 https://tmuxcheatsheet.com/
 
-* install ```xclip```
+* install ```xclip``` and ```xsel```
 
 * tmux config : add the following to ~/.tmux.conf
 ```
