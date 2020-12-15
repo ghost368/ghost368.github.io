@@ -387,6 +387,8 @@ this will exclude those folders (can add other) from watch
 
 
 * VSCode Pylance shortcuts
+|Shortcut| Command|
+|------|-------------|
 |F2| Rename|
 |Shift+F12| Go to usages|
 |Alt+Shift+F12| Find usages|
