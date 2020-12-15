@@ -1,6 +1,9 @@
 
 * Ctrl+Shift+P -> Install Package Control
 
+* May need to do the following:
+Menu > Sublime Text > Preferences > Settings - User> remove the line with `"color_scheme"
+
 * Color Scheme: Install Colorsublime package, then install NetBeans scheme
 
 * Hide minimap
