@@ -57,6 +57,7 @@
   ```
   sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-generic-recommended
   ```
+  (may prefer to simply install full texlive scheme, that will contain those packages too)
   
   - install ```pandoc``` to convert markdown to other formats than html
   
