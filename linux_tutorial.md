@@ -191,3 +191,5 @@ to the .bashrc file
 	- now the file should appear in file Properties -> Open with, etc
 
 * to set default application for a file type go to any such file's Properties -> Open with -> set as default
+
+* to go to pure terminal mode before reboot/login : press Ctrl+Alt+F1 (can be any key from F1 to F7 depending on the system, try different ones)
