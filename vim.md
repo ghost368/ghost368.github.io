@@ -130,19 +130,30 @@ nnoremap <leader>c "_c
 
 
 
+* to use Ctrl+R to replace selected text:
+add ```vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>``` to .vimrc
+
+
+
 ### Terminal vim plugins
 
 
+* install pathogen
+```
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
+then add ```execute pathogen#infect()``` line to ~/.vimrc
+
 * install autocomplete for python in vim YouCompleteMe
 ```
-sudo apt install vim-youcompleteme
-vim-addon-manager install youcompleteme
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cd ~/.vim/bundle
+git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+./install.sh --clang-completer
 ```
-(may also need to install vim addon manager via sudo apt-get install)
-
-
-* to use Ctrl+R to replace selected text:
-add ```vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>``` to .vimrc
 
 
 * install ropevim code python code refactoring
@@ -153,11 +164,6 @@ echo "source ~/.vim/python_ropevim.vim" >> ~/.vimrc
 ```
 see command description here https://github.com/python-rope/ropevim
 
-* install pathogen
-```
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-```
 
 
 * install vim-slime and vim-ipython-cell
