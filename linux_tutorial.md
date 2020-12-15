@@ -179,7 +179,7 @@ to the .bashrc file
 	runnable using chmod
 	- if you want to add application to the system (so that e.g. you can set it as default for opening certain type
 	of files. etc):
-	in ```/usr/share/application``` there are a low of *.desktop files, let's say we want to register an application called 
+	in ```/usr/share/applications``` there are a low of *.desktop files, let's say we want to register an application called 
 	Modern CSV, with executable soft link ```/home/vlad/bin/mcsv```, create the following file ```mcsv.desktop```
 	```
 	[Desktop Entry]
