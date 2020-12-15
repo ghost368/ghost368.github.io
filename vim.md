@@ -221,9 +221,8 @@ nnoremap <F10> :IPythonCellExecuteCellJump<CR>
 
 * shortcuts for NERDTree
 ```
-let map_leader = ","
-nmap <leader>ne :NERDTreeToggle<cr>
-nmap <leader>nem :NERDTreeMirror<cr>
+nmap <F6> :NERDTreeToggle<CR>
+nmap <F7> :NERDTreeMirror<CR>
 ```
 
 * splitting editor window:
