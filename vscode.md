@@ -39,6 +39,7 @@
 
 * go to specilised conda environment for editor utils (called e.g. vscode, same where we install black)
     - install mypy there via pip
+    - set mypy path to mypy in this env (same as for black)
     - in VSCode settings check the flag for python->linting->mypy enabled
     - add ```--ignore-missing-imports``` to mypy args in the settings
     - in command palette can turn linting on and off
