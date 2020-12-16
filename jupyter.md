@@ -128,6 +128,11 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 		- also maybe used if during development I modify the package and the notebook at the same time, but later can create an env with the package properly installed to run the notebook in
 
 
+* to make conda env appear in the jupyter lab kernels need run 
+```
+python -m ipykernel install --user --name=envNameToShow
+```
+(need ipykernel installed in the env, it usually is naturally)
 
 
 
