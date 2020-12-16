@@ -1,13 +1,13 @@
 * installing correct nvidia drivers (by default usually the open-source nouveau driver is installed)
 * on Ubuntu can do this by running 
-```
-ubuntu-drivers devices
-```
-and if nvidia driver is recommended, can simply run
-```
-sudo ubuntu-drivers autoinstall
-```
-(on fedora it's more complicated, check online)
+	```	
+	ubuntu-drivers devices
+	```
+	and if nvidia driver is recommended, can simply run
+	```
+	sudo ubuntu-drivers autoinstall
+	```
+	(on fedora it's more complicated, check online)
 
 * CUDA and CuDNN using conda vs manual
 	- the easiest way to install CUDA/CuDNN is to simply create a conda env and install tensorflow-gpu there via conda,
