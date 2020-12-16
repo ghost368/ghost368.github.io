@@ -37,11 +37,10 @@
 	for the installed CUDA version
 	- 
 
-###installing tensorflow:
+## installing tensorflow:
 
 * pip vs conda
 	- can install using pip (incl. poetry that is pip-based) conda
-	- I work with poetry, so prefer to use pip
 	- for this need to manually install CUDA and CuDNN globally on the linux OS, 
 	then can install compatible tensorflow versions inside environments
 	- if using conda : can install tensorflow-gpu, cudatoolkit and cudnn packages from conda 
