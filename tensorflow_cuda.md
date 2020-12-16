@@ -1,4 +1,24 @@
-* installing correct nvidia drivers
+* installing correct nvidia drivers (by default usually the open-source nouveau driver is installed)
+* on Ubuntu can do this by running 
+```
+ubuntu-drivers devices
+```
+and if nvidia driver is recommended, can simply run
+```
+sudo ubuntu-drivers autoinstall
+```
+(on fedora it's more complicated, check online)
+
+* CUDA and CuDNN using conda vs manual
+	- the easiest way to install CUDA/CuDNN is to simply create a conda env and install tensorflow-gpu there via conda,
+	this will install CUDA inside the env
+	- conda is by far the easiest way of installation but we are forced to use conda for env management (can try to install packages
+	via poetry on top but there may be some conflicts)
+	- for prototyping and research **definitely** choose conda and can even manage env using conda env file
+	- if it's in prod, can decide to use manual installation (maybe even inside docker container) and pure pip packages
+	- **below is the way to manually install CUDA/CuDNN (in Ubuntu)**
+	
+
 
 
 * installing CUDA
@@ -16,7 +36,7 @@
 	- load 3 .deb files where needed (Runtime, Developer and Code Samples, more details here https://medium.com/analytics-vidhya/how-to-set-up-tensorflow-gpu-on-ubuntu-18-04-lts-7a09ffd5f30f#564e)
 	for the installed CUDA version
 	- 
-=======
+
 ###installing tensorflow:
 
 * pip vs conda
