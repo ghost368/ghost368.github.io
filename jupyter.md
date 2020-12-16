@@ -105,6 +105,12 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 		- run ```jupyter lab --no-browser```
 		- copy the link, then run it with ```google-chrome --app=<link_url>```
 		(chrome.exe path in Windows)
+		- to make browser app-mode run permanent, can do the following
+			- run ```jupyter-lab --generate-config``` to generate jupyter config (if absent)
+			- in the config, usually ~/.jupyter/jupyter_notebook_config.py, make sure to have the following line
+			```
+			c.LabApp.browser = '/opt/google/chrome/google-chrome --app=%s'
+			```
 		- this will run jupyterlab, and by default the cwd of the kernels will be the dir where I ran 
 		jupyter lab
 		-typically I will either use an env of some project (to make research on the functions in that project), or a big research env, which will contain a lot of projects (e.g. installed via poetry using tar.gz and path or git-url and tag), the problem here mightly the different projects envs compatibility; 
