@@ -335,6 +335,9 @@ thus better to remap to Ctrl+Shift+left/right (look in keyboard shortcuts -> mov
 
 ###  Intellisense, pylance, jedi, pylint, refactoring
 
+* install Pylance extension
+
+
 * Python extension comes with python intellisense which enables code autocomplete
 * in settings choose tab completion to be On, use tab to go through the list of best completion options
 
