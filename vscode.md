@@ -110,7 +110,7 @@
 
 * Install Python Docstring Generator Extension, use Ctrl+Shift+2 to generate docstring
 
-* Go to keyboard shortcuts, add Shift+Alt+D shortcut for Debug Current Cell
+* Go to keyboard shortcuts, add Shift+Alt+D shortcut for Current Cell
 
 
 * Set Ctrl+Alt+Shift+0 shortcut to delete all python cells 
@@ -185,6 +185,7 @@ add as a single string (disregard json warning)
 
 * set Refresh Explorer to Ctrl+Shift+Alt+N
 
+* Terminal view : Ctrl+'
 * Change Open debug console shortcut to Ctrl+; (to be similar to terminal Ctrl+')
 * Open problems view : set to Ctrl+Shift+'
 
