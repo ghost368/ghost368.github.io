@@ -96,9 +96,9 @@
  ```
  "vim.handleKeys": {
         "<C-f>": false,
-        "<C-h>": false
-        "<C-w>": false
-    }
+        "<C-h>": false,
+        "<C-w>": false,
+    
   ```
   (in general add any keys that I wan't to preserve from vscode in vim mode)
 
@@ -205,10 +205,7 @@ use Shift+F5 to stop
 * add shortcut Shift+Alt+B to remove all breakpoints  
 
 
-* open remote settings -> add the following to remote settings.json
-```
- "python.dataScience.alwaysTrustNotebooks": true
-```
+* in settings check Always Trust Notebooks
 
 
 * to write markdown in a vscode cell
