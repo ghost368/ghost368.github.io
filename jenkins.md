@@ -1,4 +1,9 @@
-* install on linux
+* make sure that java is installed (for ubuntu)
+```
+sudo apt install default-jdk default-jre
+```
+
+* install jenkins
 ```
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
@@ -11,11 +16,6 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <your key>
 ```
 (where <your_key> is what the error message shows; then need to re-run update and install jenkins commands)
 
-also java might be needed for jenkins, install using 
-```
-sudo apt install default-jdk
-```
-(useful link https://www.fosstechnix.com/install-jenkins-on-ubuntu/)
 
 
 * start jenkins server
