@@ -402,3 +402,5 @@ this will exclude those folders (can add other) from watch
 * can open files from terminal in VSCode by ```code filepath``` (will open it in the current window if any)
 
 * may need to add ```"terminal.integrated.inheritEnv": false``` to settings.json (to make integrated bash use the .bashrc settings)
+
+* install Language-Cython extension for cython .pyx files highlighting
