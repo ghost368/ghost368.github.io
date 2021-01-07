@@ -10,7 +10,14 @@
 can run '''pytest -k pattern``` where pattern is file ending or function ending, and pytest will check only selected functions
 
 * can set markers for test function like ```@pytest.mark.some_name``` then run 
-```pytest -m some_name``` to run only marked tests
+```pytest -m some_name``` to run only marked tests;
+to avoid warning need to register custom markers in a pytest.ini file placed in the package root, with content like this
+```
+[pytest]
+markers =
+    webtest: mark a test as a webtest.
+```
+
 
 * pytest fixtures allow to run some code in each test without having to repeat it, e.g.
 
