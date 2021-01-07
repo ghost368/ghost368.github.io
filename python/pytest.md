@@ -19,7 +19,7 @@ markers =
 ```
 
 
-* pytest fixtures allow to run some code in each test without having to repeat it, e.g.
+* pytest fixtures allow to run some code in each test without having to repeat it (must use fixtures instead of global variables), e.g.
 
 ```
 import pytest
