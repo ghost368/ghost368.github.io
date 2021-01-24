@@ -199,3 +199,4 @@ python -m ipykernel install --user --name=envNameToShow
 * to install RISE (tool to make presentations in jupyter notebook) do e.g.
 ``` conda install rise ```
 (rise works only in jupyter notebooks for now, not in jupyter-lab)
+	- to use RISE choose View->Cell Toolbar -> Slideshow
