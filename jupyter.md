@@ -195,3 +195,7 @@ python -m ipykernel install --user --name=envNameToShow
 * jupyter supports autocompletion using tab (similar to plain ipython), but won't show option list automatically
 
 * use %prun magic to profile a cell run
+
+* to install RISE (tool to make presentations in jupyter notebook) do e.g.
+``` conda install rise ```
+(rise works only in jupyter notebooks for now, not in jupyter-lab)
