@@ -200,3 +200,4 @@ python -m ipykernel install --user --name=envNameToShow
 ``` conda install rise ```
 (rise works only in jupyter notebooks for now, not in jupyter-lab)
 	- to use RISE choose View->Cell Toolbar -> Slideshow
+	- use ```jupyter nbconvert --to-slides```, can also add options like ```--no-prompt  --no-input``` etc
