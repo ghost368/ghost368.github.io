@@ -404,3 +404,10 @@ this will exclude those folders (can add other) from watch
 * may need to add ```"terminal.integrated.inheritEnv": false``` to settings.json (to make integrated bash use the .bashrc settings)
 
 * install Language-Cython extension for cython .pyx files highlighting
+
+* may need to add 
+```
+"terminal.integrated.inheritEnv": true
+"terminal.integrated.automationShell.linux": "/bin/bash"
+```
+for the VSCode terminal to work correctly via ssh
