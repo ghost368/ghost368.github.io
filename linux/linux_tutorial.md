@@ -213,6 +213,8 @@ to the .bashrc file
 
 * ```git diff /path/to/file1 /path/to/file2``` can be used to get git-like colorful output of the difference between two files, even if that is outside any git repository (!!)
 
+* to open bash as another user run ```sudo -i -u user_name``` , where -i stands for interactive
+* both su and sudo use to switch users, but su asks the target user password, which sudo asks the current user password if needed (and the user has the rights to switch)
 
 * Linux terminal commands
 
