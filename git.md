@@ -430,6 +430,8 @@ __pycache__/
 .pytest_cache/
 ```
 
+* use ```git mv old_name new_name``` to properly rename folder or file, while keeping change history (rather that having deletion and new file/folder)
+
 --------
 
 **questions and further work**
