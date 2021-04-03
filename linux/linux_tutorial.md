@@ -216,6 +216,12 @@ to the .bashrc file
 * to open bash as another user run ```sudo -i -u user_name``` , where -i stands for interactive
 * both su and sudo use to switch users, but su asks the target user password, which sudo asks the current user password if needed (and the user has the rights to switch)
 
+* ```chmod``` can be use to give other users permissions for a file or folder
+	* main permissions: r - read, w - write, x - execute
+	* user variables: u - user, g - group (created in advance), o - other user, a - all three groups (i.e. everyone)
+	* e.g. ```chmod a+rx file_name``` -- give read and execute rights to everyone
+
+
 * Linux terminal commands
 
 | Command | Action |
