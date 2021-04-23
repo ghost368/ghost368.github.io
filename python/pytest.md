@@ -99,3 +99,5 @@ python -m pytest --pdb
 ```
 if any errors occur, pdf will stop at error and it's possible to access variables; can also set trace in the code using
 pytest.set_trace() (to stop pdb there and then continue using usual commands s, n, c)
+
+* use ```--capture=no``` to show logs in command line run
