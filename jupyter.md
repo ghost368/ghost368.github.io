@@ -201,3 +201,9 @@ python -m ipykernel install --user --name=envNameToShow
 (rise works only in jupyter notebooks for now, not in jupyter-lab)
 	- to use RISE choose View->Cell Toolbar -> Slideshow
 	- use ```jupyter nbconvert --to-slides```, can also add options like ```--no-prompt  --no-input``` etc
+
+* install black and isort code formatters for jupyterlab
+	* ```conda install -c conda-forge jupyterlab_code_formatter``` 
+	* install black and isort to the env via conda
+	* restart jupyterlab
+	* go to advanced settings, set black params (e.g. string normalization), default formatter, formatOnSave
