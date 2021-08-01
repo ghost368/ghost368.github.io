@@ -411,3 +411,6 @@ this will exclude those folders (can add other) from watch
 "terminal.integrated.automationShell.linux": "/bin/bash"
 ```
 for the VSCode terminal to work correctly via ssh
+
+* make sure automatic updates are enabled (can have some issues with updates, but they also have important bug fixes)
+* for better performance disable all telemetry option in the settings
