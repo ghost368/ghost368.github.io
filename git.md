@@ -217,7 +217,7 @@ HEAD is the default commit)
 * undo action will appear as a new commit
 * can select specific commit to undo (not necessarily the latest, the intermediate commits will be left untouched)
 * ```git revert commit_code``` will attemp to revert the commit, editor for commit message will open (similar to merge)
-* if file addition commit is reverted, the file will be deleted permanently (not left as unstaged!)
+* if the file addition commit is reverted, the file will be deleted permanently (not left as unstaged!)
 
 
 ## git reset
